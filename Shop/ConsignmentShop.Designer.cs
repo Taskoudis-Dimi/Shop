@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsignmentShop));
             this.headerText = new System.Windows.Forms.Label();
             this.itemsListBox = new System.Windows.Forms.ListBox();
             this.ShoppingCartlistBox = new System.Windows.Forms.ListBox();
@@ -165,6 +166,7 @@
             this.Controls.Add(this.itemsListBox);
             this.Controls.Add(this.headerText);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ConsignmentShop";
             this.Text = "Consignment Shop";
