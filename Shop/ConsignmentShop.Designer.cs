@@ -1,6 +1,6 @@
 ﻿namespace Shop
 {
-    partial class Form1
+    partial class ConsignmentShop
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,13 +29,16 @@
         private void InitializeComponent()
         {
             this.headerText = new System.Windows.Forms.Label();
-            this.itemsListoBox = new System.Windows.Forms.ListBox();
+            this.itemsListBox = new System.Windows.Forms.ListBox();
             this.ShoppingCartlistBox = new System.Windows.Forms.ListBox();
-            this.listBox3 = new System.Windows.Forms.ListBox();
             this.itemsListBoxlabel = new System.Windows.Forms.Label();
-            this.purchaseItem = new System.Windows.Forms.Button();
+            this.addToCartItem = new System.Windows.Forms.Button();
             this.ShoppingCartlabel = new System.Windows.Forms.Label();
             this.makePurchase = new System.Windows.Forms.Button();
+            this.vendorListBoxLabel = new System.Windows.Forms.Label();
+            this.vendorListBox = new System.Windows.Forms.ListBox();
+            this.storeProfitLabel = new System.Windows.Forms.Label();
+            this.storeProfitValue = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // headerText
@@ -48,14 +51,14 @@
             this.headerText.TabIndex = 0;
             this.headerText.Text = "Consignment Shop";
             // 
-            // itemsListoBox
+            // itemsListBox
             // 
-            this.itemsListoBox.FormattingEnabled = true;
-            this.itemsListoBox.ItemHeight = 21;
-            this.itemsListoBox.Location = new System.Drawing.Point(44, 137);
-            this.itemsListoBox.Name = "itemsListoBox";
-            this.itemsListoBox.Size = new System.Drawing.Size(210, 151);
-            this.itemsListoBox.TabIndex = 1;
+            this.itemsListBox.FormattingEnabled = true;
+            this.itemsListBox.ItemHeight = 21;
+            this.itemsListBox.Location = new System.Drawing.Point(44, 137);
+            this.itemsListBox.Name = "itemsListBox";
+            this.itemsListBox.Size = new System.Drawing.Size(210, 151);
+            this.itemsListBox.TabIndex = 1;
             // 
             // ShoppingCartlistBox
             // 
@@ -65,15 +68,6 @@
             this.ShoppingCartlistBox.Name = "ShoppingCartlistBox";
             this.ShoppingCartlistBox.Size = new System.Drawing.Size(210, 151);
             this.ShoppingCartlistBox.TabIndex = 2;
-            // 
-            // listBox3
-            // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 21;
-            this.listBox3.Location = new System.Drawing.Point(44, 355);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(210, 151);
-            this.listBox3.TabIndex = 3;
             // 
             // itemsListBoxlabel
             // 
@@ -85,14 +79,15 @@
             this.itemsListBoxlabel.TabIndex = 4;
             this.itemsListBoxlabel.Text = "Store Items";
             // 
-            // purchaseItem
+            // addToCartItem
             // 
-            this.purchaseItem.Location = new System.Drawing.Point(318, 184);
-            this.purchaseItem.Name = "purchaseItem";
-            this.purchaseItem.Size = new System.Drawing.Size(114, 34);
-            this.purchaseItem.TabIndex = 5;
-            this.purchaseItem.Text = "Add To Cart";
-            this.purchaseItem.UseVisualStyleBackColor = true;
+            this.addToCartItem.Location = new System.Drawing.Point(318, 184);
+            this.addToCartItem.Name = "addToCartItem";
+            this.addToCartItem.Size = new System.Drawing.Size(114, 34);
+            this.addToCartItem.TabIndex = 5;
+            this.addToCartItem.Text = "Add To Cart";
+            this.addToCartItem.UseVisualStyleBackColor = true;
+            this.addToCartItem.Click += new System.EventHandler(this.addToCart_Click);
             // 
             // ShoppingCartlabel
             // 
@@ -112,23 +107,66 @@
             this.makePurchase.TabIndex = 7;
             this.makePurchase.Text = "Purchase";
             this.makePurchase.UseVisualStyleBackColor = true;
+            this.makePurchase.Click += new System.EventHandler(this.makePurchase_Click);
             // 
-            // Form1
+            // vendorListBoxLabel
+            // 
+            this.vendorListBoxLabel.AutoSize = true;
+            this.vendorListBoxLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.vendorListBoxLabel.Location = new System.Drawing.Point(44, 352);
+            this.vendorListBoxLabel.Name = "vendorListBoxLabel";
+            this.vendorListBoxLabel.Size = new System.Drawing.Size(65, 21);
+            this.vendorListBoxLabel.TabIndex = 9;
+            this.vendorListBoxLabel.Text = "Vendor";
+            // 
+            // vendorListBox
+            // 
+            this.vendorListBox.FormattingEnabled = true;
+            this.vendorListBox.ItemHeight = 21;
+            this.vendorListBox.Location = new System.Drawing.Point(44, 386);
+            this.vendorListBox.Name = "vendorListBox";
+            this.vendorListBox.Size = new System.Drawing.Size(210, 151);
+            this.vendorListBox.TabIndex = 8;
+            // 
+            // storeProfitLabel
+            // 
+            this.storeProfitLabel.AutoSize = true;
+            this.storeProfitLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.storeProfitLabel.Location = new System.Drawing.Point(493, 370);
+            this.storeProfitLabel.Name = "storeProfitLabel";
+            this.storeProfitLabel.Size = new System.Drawing.Size(97, 21);
+            this.storeProfitLabel.TabIndex = 10;
+            this.storeProfitLabel.Text = "Store Profit";
+            // 
+            // storeProfitValue
+            // 
+            this.storeProfitValue.AutoSize = true;
+            this.storeProfitValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.storeProfitValue.Location = new System.Drawing.Point(627, 370);
+            this.storeProfitValue.Name = "storeProfitValue";
+            this.storeProfitValue.Size = new System.Drawing.Size(54, 21);
+            this.storeProfitValue.TabIndex = 11;
+            this.storeProfitValue.Text = "$ 0.00";
+            // 
+            // ConsignmentShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1029, 630);
+            this.Controls.Add(this.storeProfitValue);
+            this.Controls.Add(this.storeProfitLabel);
+            this.Controls.Add(this.vendorListBoxLabel);
+            this.Controls.Add(this.vendorListBox);
             this.Controls.Add(this.makePurchase);
             this.Controls.Add(this.ShoppingCartlabel);
-            this.Controls.Add(this.purchaseItem);
+            this.Controls.Add(this.addToCartItem);
             this.Controls.Add(this.itemsListBoxlabel);
-            this.Controls.Add(this.listBox3);
             this.Controls.Add(this.ShoppingCartlistBox);
-            this.Controls.Add(this.itemsListoBox);
+            this.Controls.Add(this.itemsListBox);
             this.Controls.Add(this.headerText);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "ConsignmentShop";
             this.Text = "Consignment Shop";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -138,12 +176,15 @@
         #endregion
 
         private Label headerText;
-        private ListBox itemsListoBox;
+        private ListBox itemsListBox;
         private ListBox ShoppingCartlistBox;
-        private ListBox listBox3;
         private Label itemsListBoxlabel;
-        private Button purchaseItem;
+        private Button addToCartItem;
         private Label ShoppingCartlabel;
         private Button makePurchase;
+        private Label vendorListBoxLabel;
+        private ListBox vendorListBox;
+        private Label storeProfitLabel;
+        private Label storeProfitValue;
     }
 }
