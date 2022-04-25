@@ -11,7 +11,7 @@ namespace Shop
     public partial class ConsignmentShop : Form
     {
 
-        private Store store = new Store();
+        private Store store = new Store();// Φτιάχνω object από τη class Store
 
         private List<Item> shoppingCartData = new List<Item>();
 
@@ -40,6 +40,8 @@ namespace Shop
             ShoppingCartlistBox.ValueMember = "Display";
 
 
+
+
             vendorBinding.DataSource = store.Vendors;
             vendorListBox.DataSource = vendorBinding;
 
@@ -52,9 +54,12 @@ namespace Shop
         public void SetupData()
         {
 
+            //Ορίζω manually τιμές για τη List Vendor
             store.Vendors.Add(new Vendor { FirstName = "Bill", LastName = "Smith" });
             store.Vendors.Add(new Vendor { FirstName = "Sue", LastName = "Jones" });
 
+
+            //Ορίζω manually τιμές για τη List Items
             store.Items.Add(new Item
             {
                 Title = "Moby Dick",

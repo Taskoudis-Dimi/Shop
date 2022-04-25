@@ -14,10 +14,13 @@ namespace ShopLibrary
 
         public double Commission { get; set; }
         public decimal PaymentDue { get; set; }
+
+
         public Vendor()
         {
             Commission = .5;
         }
+
         public string Display
         {
             get

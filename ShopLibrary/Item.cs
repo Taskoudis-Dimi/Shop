@@ -16,6 +16,8 @@ namespace ShopLibrary
         public bool PaymentDistributed { get; set; }
         public Vendor Owner { get; set; }
 
+
+        //Αυτο χρησιμοποιείται στο listbox.ValueMember για να απεικονίσει τα δεδομένα
         public string Display
         {
             get

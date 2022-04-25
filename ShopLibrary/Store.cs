@@ -14,6 +14,7 @@ namespace ShopLibrary
         public List<Vendor> Vendors { get; set; }
         public List<Item> Items { get; set; }
 
+        //Constructor για τις Lists Vendor, Items
         public Store()
         {
             Vendors = new List<Vendor>();
