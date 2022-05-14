@@ -33,6 +33,7 @@ namespace Shop
             itemsListBox.DisplayMember = "Display";
             itemsListBox.ValueMember = "Display";
 
+
             cartBinding.DataSource = shoppingCartData;
             ShoppingCartlistBox.DataSource = cartBinding;
 
@@ -116,7 +117,9 @@ namespace Shop
             vendorBinding.ResetBindings(false);
 
 
-
         }
+
+
+
     }
 }

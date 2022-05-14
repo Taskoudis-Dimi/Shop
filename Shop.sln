@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shop", "Shop\Shop.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopLibrary", "ShopLibrary\ShopLibrary.csproj", "{CCB3BE67-F190-432D-9140-AF5D482C13A9}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ShopSetup", "ShopSetup\ShopSetup.vdproj", "{589115A9-842C-4848-AE46-4602D726B825}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,8 @@ Global
 		{CCB3BE67-F190-432D-9140-AF5D482C13A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCB3BE67-F190-432D-9140-AF5D482C13A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCB3BE67-F190-432D-9140-AF5D482C13A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{589115A9-842C-4848-AE46-4602D726B825}.Debug|Any CPU.ActiveCfg = Debug
+		{589115A9-842C-4848-AE46-4602D726B825}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
