@@ -55,6 +55,8 @@ namespace Shop
         public void SetupData()
         {
 
+            //TODO retrieve data from db
+
             //Ορίζω manually τιμές για τη List Vendor
             store.Vendors.Add(new Vendor { FirstName = "Bill", LastName = "Smith" });
             store.Vendors.Add(new Vendor { FirstName = "Sue", LastName = "Jones" });
@@ -91,6 +93,10 @@ namespace Shop
             shoppingCartData.Add(selectedItem);
 
             cartBinding.ResetBindings(false);
+            itemsListBox.Items.Remove(selectedItem);
+
+
+
 
         }
 
