@@ -89,13 +89,10 @@ namespace Shop
             //Do we remove the item from the items list? no
             Item selectedItem = (Item)itemsListBox.SelectedItem;
 
+            //γεμίζω τη λίστα shoppingCartData με τα selectedItem
             shoppingCartData.Add(selectedItem);
 
             cartBinding.ResetBindings(false);
-            
-
-
-
 
         }
 

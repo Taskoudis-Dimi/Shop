@@ -49,26 +49,26 @@
             this.headerText.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.headerText.Location = new System.Drawing.Point(364, 23);
             this.headerText.Name = "headerText";
-            this.headerText.Size = new System.Drawing.Size(367, 55);
+            this.headerText.Size = new System.Drawing.Size(243, 37);
             this.headerText.TabIndex = 0;
             this.headerText.Text = "Consignment Shop";
             // 
             // itemsListBox
             // 
             this.itemsListBox.FormattingEnabled = true;
-            this.itemsListBox.ItemHeight = 32;
+            this.itemsListBox.ItemHeight = 21;
             this.itemsListBox.Location = new System.Drawing.Point(100, 154);
             this.itemsListBox.Name = "itemsListBox";
-            this.itemsListBox.Size = new System.Drawing.Size(270, 164);
+            this.itemsListBox.Size = new System.Drawing.Size(270, 151);
             this.itemsListBox.TabIndex = 1;
             // 
             // ShoppingCartlistBox
             // 
             this.ShoppingCartlistBox.FormattingEnabled = true;
-            this.ShoppingCartlistBox.ItemHeight = 32;
+            this.ShoppingCartlistBox.ItemHeight = 21;
             this.ShoppingCartlistBox.Location = new System.Drawing.Point(727, 154);
             this.ShoppingCartlistBox.Name = "ShoppingCartlistBox";
-            this.ShoppingCartlistBox.Size = new System.Drawing.Size(280, 164);
+            this.ShoppingCartlistBox.Size = new System.Drawing.Size(280, 151);
             this.ShoppingCartlistBox.TabIndex = 2;
             // 
             // itemsListBoxlabel
@@ -77,7 +77,7 @@
             this.itemsListBoxlabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.itemsListBoxlabel.Location = new System.Drawing.Point(162, 103);
             this.itemsListBoxlabel.Name = "itemsListBoxlabel";
-            this.itemsListBoxlabel.Size = new System.Drawing.Size(143, 32);
+            this.itemsListBoxlabel.Size = new System.Drawing.Size(96, 21);
             this.itemsListBoxlabel.TabIndex = 4;
             this.itemsListBoxlabel.Text = "Store Items";
             // 
@@ -97,7 +97,7 @@
             this.ShoppingCartlabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ShoppingCartlabel.Location = new System.Drawing.Point(800, 103);
             this.ShoppingCartlabel.Name = "ShoppingCartlabel";
-            this.ShoppingCartlabel.Size = new System.Drawing.Size(178, 32);
+            this.ShoppingCartlabel.Size = new System.Drawing.Size(119, 21);
             this.ShoppingCartlabel.TabIndex = 6;
             this.ShoppingCartlabel.Text = "Shopping Cart";
             // 
@@ -117,26 +117,26 @@
             this.vendorListBoxLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.vendorListBoxLabel.Location = new System.Drawing.Point(480, 427);
             this.vendorListBoxLabel.Name = "vendorListBoxLabel";
-            this.vendorListBoxLabel.Size = new System.Drawing.Size(96, 32);
+            this.vendorListBoxLabel.Size = new System.Drawing.Size(65, 21);
             this.vendorListBoxLabel.TabIndex = 9;
             this.vendorListBoxLabel.Text = "Vendor";
             // 
             // vendorListBox
             // 
             this.vendorListBox.FormattingEnabled = true;
-            this.vendorListBox.ItemHeight = 32;
+            this.vendorListBox.ItemHeight = 21;
             this.vendorListBox.Location = new System.Drawing.Point(402, 471);
             this.vendorListBox.Name = "vendorListBox";
-            this.vendorListBox.Size = new System.Drawing.Size(270, 164);
+            this.vendorListBox.Size = new System.Drawing.Size(270, 151);
             this.vendorListBox.TabIndex = 8;
             // 
             // storeProfitLabel
             // 
             this.storeProfitLabel.AutoSize = true;
             this.storeProfitLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.storeProfitLabel.Location = new System.Drawing.Point(60, 528);
+            this.storeProfitLabel.Location = new System.Drawing.Point(451, 636);
             this.storeProfitLabel.Name = "storeProfitLabel";
-            this.storeProfitLabel.Size = new System.Drawing.Size(145, 32);
+            this.storeProfitLabel.Size = new System.Drawing.Size(97, 21);
             this.storeProfitLabel.TabIndex = 10;
             this.storeProfitLabel.Text = "Store Profit";
             // 
@@ -144,9 +144,9 @@
             // 
             this.storeProfitValue.AutoSize = true;
             this.storeProfitValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.storeProfitValue.Location = new System.Drawing.Point(246, 528);
+            this.storeProfitValue.Location = new System.Drawing.Point(564, 636);
             this.storeProfitValue.Name = "storeProfitValue";
-            this.storeProfitValue.Size = new System.Drawing.Size(84, 32);
+            this.storeProfitValue.Size = new System.Drawing.Size(54, 21);
             this.storeProfitValue.TabIndex = 11;
             this.storeProfitValue.Text = "$ 0.00";
             // 
@@ -162,7 +162,7 @@
             // 
             // ConsignmentShop
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1094, 679);
             this.Controls.Add(this.removeButton);
