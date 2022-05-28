@@ -29,7 +29,6 @@ namespace Shop
             itemsBinding.DataSource = store.Items.Where(x => x.Sold == false).ToList();
             itemsListBox.DataSource = itemsBinding;
 
-
             itemsListBox.DisplayMember = "Display";
             itemsListBox.ValueMember = "Display";
 
@@ -93,7 +92,7 @@ namespace Shop
             shoppingCartData.Add(selectedItem);
 
             cartBinding.ResetBindings(false);
-            itemsListBox.Items.Remove(selectedItem);
+            
 
 
 
@@ -125,7 +124,11 @@ namespace Shop
 
         }
 
+        private void removeButton_Click(object sender, EventArgs e)
+        {
 
+            //itemsListBox.Items.RemoveAt(itemsListBox.SelectedIndex);
 
+        }
     }
-}
+} 
