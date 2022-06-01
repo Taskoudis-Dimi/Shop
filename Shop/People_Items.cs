@@ -1,5 +1,4 @@
 ﻿using ShopLibrary;
-using ShopLibrary.SqlDataAccess;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +18,7 @@ namespace Shop
         {
             InitializeComponent();
 
-            SqlDataAccess loaddata = new SqlDataAccess();
+            SqlConnector loaddata = new SqlConnector();
             loaddata.retrieceData("Select * From People");
 
         }

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Shop
 {
     public partial class addPeople : Form
@@ -21,7 +22,7 @@ namespace Shop
         private void addButton_Click(object sender, EventArgs e)
         {
             {
-                SqlDataAccess loaddata = new SqlDataAccess();
+
 
                 //loaddata.retrieceData("Select * From CategoryTbl");
             }

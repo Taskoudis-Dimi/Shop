@@ -9,36 +9,42 @@ using System.Data;
 using System.Data.Common;
 
 
-
-
-namespace ShopLibrary.SqlDataAccess
+namespace Shop
 {
-    public class SqlDataAccess
+    public class Connection
     {
+
         SqlConnection con = new SqlConnection();
         public DataTable table = new DataTable();
 
-        public SqlDataAccess()
-        {
-            con.ConnectionString = ConfigurationManager.ConnectionStrings["Shop"].ConnectionString;
+        
 
+
+        public Connection()
+        {
+            con.ConnectionString = ConfigurationManager.ConnectionStrings["Supermarket"].ConnectionString;
+            
         }
 
 
-        public void retrieceData(string cmd)
+        private void OpenConnection()
+        {
+
+        }
+
+        public void retrieveData(string command)
         {
             try
             {
                 con.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd, con);
+                SqlDataAdapter adapter = new SqlDataAdapter(command, con);
                 adapter.Fill(table);
-            
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                
 
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -46,12 +52,14 @@ namespace ShopLibrary.SqlDataAccess
             }
         }
 
-        public void commandExc(string cmd)
+
+
+        public void commandExc(string command)
         {
             try
             {
                 con.Open();
-                SqlCommand sqlcomm = new SqlCommand(cmd, con);
+                SqlCommand sqlcomm = new SqlCommand(command, con);
 
                 int rowInfected = sqlcomm.ExecuteNonQuery();
                 if (rowInfected > 0)
@@ -71,4 +79,5 @@ namespace ShopLibrary.SqlDataAccess
 
 
     }
+
 }
