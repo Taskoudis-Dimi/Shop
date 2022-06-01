@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShopLibrary;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +17,17 @@ namespace Shop
         {
             InitializeComponent();
         }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            SqlDataAccess loaddata = new SqlDataAccess();
+
+            //loaddata.retrieceData("Select * From CategoryTbl");
+
+
+
+        }
     }
 }
+
+

@@ -1,4 +1,4 @@
-using ShopLibrary;
+ο»Ώusing ShopLibrary;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +11,7 @@ namespace Shop
     public partial class ConsignmentShop : Form
     {
 
-        private Store store = new Store();// Φτιάχνω object από τη class Store
+        private Store store = new Store();//
 
         private List<Item> shoppingCartData = new List<Item>();
 
@@ -39,7 +39,7 @@ namespace Shop
             ShoppingCartlistBox.DisplayMember = "Display";
             ShoppingCartlistBox.ValueMember = "Display";
 
-
+           
 
 
             vendorBinding.DataSource = store.Vendors;
@@ -56,12 +56,12 @@ namespace Shop
 
             //TODO retrieve data from db
 
-            //Ορίζω manually τιμές για τη List Vendor
+            //
             store.Vendors.Add(new Vendor { FirstName = "Bill", LastName = "Smith" });
             store.Vendors.Add(new Vendor { FirstName = "Sue", LastName = "Jones" });
 
 
-            //Ορίζω manually τιμές για τη List Items
+            //
             store.Items.Add(new Item
             {
                 Title = "Moby Dick",
@@ -89,7 +89,7 @@ namespace Shop
             //Do we remove the item from the items list? no
             Item selectedItem = (Item)itemsListBox.SelectedItem;
 
-            //γεμίζω τη λίστα shoppingCartData με τα selectedItem
+            //
             shoppingCartData.Add(selectedItem);
 
             cartBinding.ResetBindings(false);
