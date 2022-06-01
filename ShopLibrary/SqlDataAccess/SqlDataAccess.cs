@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Data;
+using System.Data.Common;
 
 
 
 
-namespace ShopLibrary
+namespace ShopLibrary.SqlDataAccess
 {
     public class SqlDataAccess
     {
@@ -19,7 +20,7 @@ namespace ShopLibrary
 
         public SqlDataAccess()
         {
-            con.ConnectionString = ConfigurationManager.ConnectionStrings["Tutorials"].ConnectionString;
+            con.ConnectionString = ConfigurationManager.ConnectionStrings["Shop"].ConnectionString;
 
         }
 

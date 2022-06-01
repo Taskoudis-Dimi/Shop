@@ -53,6 +53,7 @@
             this.ItemsListBox.Name = "ItemsListBox";
             this.ItemsListBox.Size = new System.Drawing.Size(270, 139);
             this.ItemsListBox.TabIndex = 3;
+            this.ItemsListBox.SelectedIndexChanged += new System.EventHandler(this.ItemsListBox_SelectedIndexChanged);
             // 
             // addButton
             // 
@@ -94,7 +95,7 @@
             this.itemsButton.UseVisualStyleBackColor = true;
             this.itemsButton.Click += new System.EventHandler(this.itemsButton_Click);
             // 
-            // People
+            // People_Items
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -105,7 +106,7 @@
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.ItemsListBox);
             this.Controls.Add(this.PeopleListBox);
-            this.Name = "People";
+            this.Name = "People_Items";
             this.Text = "People";
             this.ResumeLayout(false);
             this.PerformLayout();

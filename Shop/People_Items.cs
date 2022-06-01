@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ShopLibrary;
+using ShopLibrary.SqlDataAccess;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Shop
 {
     public partial class People_Items : Form
@@ -16,7 +19,8 @@ namespace Shop
         {
             InitializeComponent();
 
-
+            SqlDataAccess loaddata = new SqlDataAccess();
+            loaddata.retrieceData("Select * From People");
 
         }
 
@@ -31,6 +35,11 @@ namespace Shop
         {
             addItems form = new addItems();
             form.ShowDialog();
+        }
+
+        private void ItemsListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

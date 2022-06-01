@@ -31,7 +31,7 @@
             this.Pricelabel = new System.Windows.Forms.Label();
             this.DescriptionLabel = new System.Windows.Forms.Label();
             this.TitleLabel = new System.Windows.Forms.Label();
-            this.PhoneTextBox = new System.Windows.Forms.TextBox();
+            this.PriceTextBox = new System.Windows.Forms.TextBox();
             this.DescriptionTextBox = new System.Windows.Forms.TextBox();
             this.TitleTextBox = new System.Windows.Forms.TextBox();
             this.addItemLabel = new System.Windows.Forms.Label();
@@ -68,12 +68,12 @@
             this.TitleLabel.TabIndex = 11;
             this.TitleLabel.Text = "Title";
             // 
-            // PhoneTextBox
+            // PriceTextBox
             // 
-            this.PhoneTextBox.Location = new System.Drawing.Point(130, 229);
-            this.PhoneTextBox.Name = "PhoneTextBox";
-            this.PhoneTextBox.Size = new System.Drawing.Size(100, 23);
-            this.PhoneTextBox.TabIndex = 10;
+            this.PriceTextBox.Location = new System.Drawing.Point(130, 229);
+            this.PriceTextBox.Name = "PriceTextBox";
+            this.PriceTextBox.Size = new System.Drawing.Size(100, 23);
+            this.PriceTextBox.TabIndex = 10;
             // 
             // DescriptionTextBox
             // 
@@ -118,7 +118,7 @@
             this.Controls.Add(this.Pricelabel);
             this.Controls.Add(this.DescriptionLabel);
             this.Controls.Add(this.TitleLabel);
-            this.Controls.Add(this.PhoneTextBox);
+            this.Controls.Add(this.PriceTextBox);
             this.Controls.Add(this.DescriptionTextBox);
             this.Controls.Add(this.TitleTextBox);
             this.Controls.Add(this.addItemLabel);
@@ -134,7 +134,7 @@
         private Label Pricelabel;
         private Label DescriptionLabel;
         private Label TitleLabel;
-        private TextBox PhoneTextBox;
+        private TextBox PriceTextBox;
         private TextBox DescriptionTextBox;
         private TextBox TitleTextBox;
         private Label addItemLabel;

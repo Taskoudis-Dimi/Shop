@@ -13,9 +13,33 @@ namespace Shop
 {
     public partial class addItems : Form
     {
+
+
         public addItems()
         {
             InitializeComponent();
+
+
+
+
+        }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SqlDataAccess loaddata = new SqlDataAccess();
+                loaddata.retrieceData("Insert Into Item values(" + TitleTextBox.Text + ",'" + DescriptionTextBox.Text + "','" + PriceTextBox.Text + "')");
+                MessageBox.Show("Success!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
+               
+            
+
+
         }
 
         private void addButton_Click(object sender, EventArgs e)
