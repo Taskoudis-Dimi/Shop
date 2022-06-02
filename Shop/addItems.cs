@@ -20,26 +20,29 @@ namespace Shop
             InitializeComponent();
 
 
+
+        }
+
+        private void display()
+        {
             Connection loaddata = new Connection();
-            loaddata.commandExc("Select * From Shop");
-            listBox1.DataSource = loaddata.table;
-
-
+            loaddata.retrieveData("Select * From Items");
         }
 
         private void addButton_Click_1(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    SqlConnector loaddata = new SqlConnector();
-            //    //loaddata.commandExc("Insert Into Items values(" + TitleTextBox.Text + ",'" + DescriptionTextBox.Text + "','" + PriceTextBox.Text + "')");
-            //    loaddata.commandExc("Select * From Shop");
-            //    MessageBox.Show("Success!");
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message, "Error");
-            //}
+            try
+            {
+                Connection loaddata = new Connection();
+                loaddata.commandExc("Insert Into Items Values(" + TitleTextBox.Text + ",'" + DescriptionTextBox.Text + "','" + PriceTextBox.Text + "')");
+                MessageBox.Show("Success!");
+                //display();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -47,11 +50,6 @@ namespace Shop
 
         }
 
-        private void connect_Click(object sender, EventArgs e)
-        {
-            Connection loaddata = new Connection();
-            MessageBox.Show("Test");
-        }
     }
 }
 

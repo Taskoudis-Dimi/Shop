@@ -22,8 +22,7 @@ namespace Shop
 
         public Connection()
         {
-            con.ConnectionString = ConfigurationManager.ConnectionStrings["Supermarket"].ConnectionString;
-            
+            con.ConnectionString = ConfigurationManager.ConnectionStrings["test"].ConnectionString;
         }
 
 

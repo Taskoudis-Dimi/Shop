@@ -18,8 +18,14 @@ namespace Shop
         {
             InitializeComponent();
 
-            SqlConnector loaddata = new SqlConnector();
-            loaddata.retrieceData("Select * From People");
+            Connection loaddata = new Connection();
+            loaddata.commandExc("Select * From People");
+            PeopleListBox.DataSource = loaddata.table;
+
+
+            Connection loaddata2 = new Connection();
+            loaddata2.retrieveData("Select * From Items");
+            ItemsListBox.DataSource = loaddata2.table;
 
         }
 

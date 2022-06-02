@@ -21,10 +21,15 @@ namespace Shop
 
         private void addButton_Click(object sender, EventArgs e)
         {
+            try
             {
-
-
-                //loaddata.retrieceData("Select * From CategoryTbl");
+                Connection loaddata = new Connection();
+                loaddata.commandExc("Insert Into People values(" + FirstNameTextBox.Text + ",'" + LastNameTextBox.Text + "','" + PhoneTextBox.Text + "')"); 
+                MessageBox.Show("Succes Insert");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
             }
         }
     }
