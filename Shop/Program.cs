@@ -9,7 +9,7 @@ namespace Shop
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new addItems());
+            Application.Run(new People_Items());
         }
     }
 }

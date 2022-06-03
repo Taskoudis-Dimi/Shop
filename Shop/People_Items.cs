@@ -18,14 +18,8 @@ namespace Shop
         {
             InitializeComponent();
 
-            Connection loaddata = new Connection();
-            loaddata.commandExc("Select * From People");
-            PeopleListBox.DataSource = loaddata.table;
-
-
-            Connection loaddata2 = new Connection();
-            loaddata2.retrieveData("Select * From Items");
-            ItemsListBox.DataSource = loaddata2.table;
+            List<string> items = new List<string>();
+            
 
         }
 
@@ -42,9 +36,38 @@ namespace Shop
             form.ShowDialog();
         }
 
-        private void ItemsListBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void PeopleDataGridView_Load(object sender, EventArgs e)
         {
+            Connection loaddata = new Connection();
+            loaddata.retrieveData("Select * From People");
+            PeopleDataGridView.DataSource = loaddata.table;
 
+
+        }
+
+        private void ItemsDataGridView_Load(object sender, EventArgs e)
+        {
+            Connection loaddata = new Connection();
+            loaddata.retrieveData("Select * From Items");
+            ItemsDataGridView.DataSource = loaddata.table;
+
+
+        }
+
+        private void PeopleDataGridView_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            ContextMenuStrip mnu = new ContextMenuStrip();
+            ToolStripMenuItem mnuCopy = new ToolStripMenuItem("Copy");
+            ToolStripMenuItem mnuCut = new ToolStripMenuItem("Cut");
+            ToolStripMenuItem mnuPaste = new ToolStripMenuItem("Paste");
+            //Assign event handlers
+            //mnuCopy.Click += new EventHandler(mnuCopy_Click);
+            //mnuCut.Click += new EventHandler(mnuCut_Click);
+            //mnuPaste.Click += new EventHandler(mnuPaste_Click);
+            //Add to main context menu
+            mnu.Items.AddRange(new ToolStripItem[] { mnuCopy, mnuCut, mnuPaste });
+            //Assign to datagridview
+            PeopleListBox.ContextMenuStrip = mnu;
         }
     }
 }

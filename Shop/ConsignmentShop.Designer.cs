@@ -61,6 +61,8 @@
             this.itemsListBox.Name = "itemsListBox";
             this.itemsListBox.Size = new System.Drawing.Size(270, 151);
             this.itemsListBox.TabIndex = 1;
+            this.itemsListBox.SelectedIndexChanged += new System.EventHandler(this.itemsListBox_SelectedIndexChanged);
+            this.itemsListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.itemsListBox_MouseDown);
             // 
             // ShoppingCartlistBox
             // 

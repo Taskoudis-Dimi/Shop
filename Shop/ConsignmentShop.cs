@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 
 namespace Shop
@@ -24,63 +25,63 @@ namespace Shop
         public ConsignmentShop()
         {
             InitializeComponent();
-            SetupData();
+            //SetupData();
 
-            itemsBinding.DataSource = store.Items.Where(x => x.Sold == false).ToList();
-            itemsListBox.DataSource = itemsBinding;
+            //itemsBinding.DataSource = store.Items.Where(x => x.Sold == false).ToList();
+            //itemsListBox.DataSource = itemsBinding;
 
-            itemsListBox.DisplayMember = "Display";
-            itemsListBox.ValueMember = "Display";
+            //itemsListBox.DisplayMember = "Display";
+            //itemsListBox.ValueMember = "Display";
 
 
-            cartBinding.DataSource = shoppingCartData;
-            ShoppingCartlistBox.DataSource = cartBinding;
+            //cartBinding.DataSource = shoppingCartData;
+            //ShoppingCartlistBox.DataSource = cartBinding;
 
-            ShoppingCartlistBox.DisplayMember = "Display";
-            ShoppingCartlistBox.ValueMember = "Display";
+            //ShoppingCartlistBox.DisplayMember = "Display";
+            //ShoppingCartlistBox.ValueMember = "Display";
 
            
 
 
-            vendorBinding.DataSource = store.Vendors;
-            vendorListBox.DataSource = vendorBinding;
+            //vendorBinding.DataSource = store.Vendors;
+            //vendorListBox.DataSource = vendorBinding;
 
-            vendorListBox.DisplayMember = "Display";
-            vendorListBox.ValueMember = "Display";
+            //vendorListBox.DisplayMember = "Display";
+            //vendorListBox.ValueMember = "Display";
 
 
         }
 
-        public void SetupData()
-        {
+        //public void SetupData()
+        //{
 
-            //TODO retrieve data from db
+        //    //TODO retrieve data from db
 
-            //
-            store.Vendors.Add(new Vendor { FirstName = "Bill", LastName = "Smith" });
-            store.Vendors.Add(new Vendor { FirstName = "Sue", LastName = "Jones" });
+        //    //
+        //    store.Vendors.Add(new Vendor { FirstName = "Bill", LastName = "Smith" });
+        //    store.Vendors.Add(new Vendor { FirstName = "Sue", LastName = "Jones" });
 
 
-            //
-            store.Items.Add(new Item
-            {
-                Title = "Moby Dick",
-                Description = "A book about a whale",
-                Price = 4.50M,
-                Owner = store.Vendors[0]
-            });
+        //    //
+        //    store.Items.Add(new Item
+        //    {
+        //        Title = "Moby Dick",
+        //        Description = "A book about a whale",
+        //        Price = 4.50M,
+        //        Owner = store.Vendors[0]
+        //    });
 
-            store.Items.Add(new Item
-            {
-                Title = "Harry Potter Book 1",
-                Description = "A book about a boy",
-                Price = 4.50M,
-                Owner = store.Vendors[1]
-            });
+        //    store.Items.Add(new Item
+        //    {
+        //        Title = "Harry Potter Book 1",
+        //        Description = "A book about a boy",
+        //        Price = 4.50M,
+        //        Owner = store.Vendors[1]
+        //    });
 
-            store.Name = "Seconds are better";
+        //    store.Name = "Seconds are better";
 
-        }
+        //}
 
         private void addToCart_Click(object sender, EventArgs e)
         {
@@ -117,7 +118,7 @@ namespace Shop
             cartBinding.ResetBindings(false);
             itemsBinding.ResetBindings(false);
             vendorBinding.ResetBindings(false);
-
+            
 
         }
 
@@ -125,6 +126,19 @@ namespace Shop
         {
 
             //itemsListBox.Items.RemoveAt(itemsListBox.SelectedIndex);
+
+        }
+
+        private void itemsListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void itemsListBox_MouseDown(object sender, MouseEventArgs e)
+        {
+
+
+
 
         }
     }

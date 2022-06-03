@@ -34,6 +34,10 @@
             this.PeopleLabel = new System.Windows.Forms.Label();
             this.ItemsLabel = new System.Windows.Forms.Label();
             this.itemsButton = new System.Windows.Forms.Button();
+            this.PeopleDataGridView = new System.Windows.Forms.DataGridView();
+            this.ItemsDataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.PeopleDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // PeopleListBox
@@ -53,7 +57,6 @@
             this.ItemsListBox.Name = "ItemsListBox";
             this.ItemsListBox.Size = new System.Drawing.Size(270, 139);
             this.ItemsListBox.TabIndex = 3;
-            this.ItemsListBox.SelectedIndexChanged += new System.EventHandler(this.ItemsListBox_SelectedIndexChanged);
             // 
             // addButton
             // 
@@ -95,11 +98,32 @@
             this.itemsButton.UseVisualStyleBackColor = true;
             this.itemsButton.Click += new System.EventHandler(this.itemsButton_Click);
             // 
+            // PeopleDataGridView
+            // 
+            this.PeopleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.PeopleDataGridView.Location = new System.Drawing.Point(50, 288);
+            this.PeopleDataGridView.Name = "PeopleDataGridView";
+            this.PeopleDataGridView.RowTemplate.Height = 25;
+            this.PeopleDataGridView.Size = new System.Drawing.Size(264, 150);
+            this.PeopleDataGridView.TabIndex = 8;
+            this.PeopleDataGridView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PeopleDataGridView_MouseDown_1);
+            // 
+            // ItemsDataGridView
+            // 
+            this.ItemsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ItemsDataGridView.Location = new System.Drawing.Point(444, 288);
+            this.ItemsDataGridView.Name = "ItemsDataGridView";
+            this.ItemsDataGridView.RowTemplate.Height = 25;
+            this.ItemsDataGridView.Size = new System.Drawing.Size(270, 150);
+            this.ItemsDataGridView.TabIndex = 9;
+            // 
             // People_Items
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ItemsDataGridView);
+            this.Controls.Add(this.PeopleDataGridView);
             this.Controls.Add(this.itemsButton);
             this.Controls.Add(this.ItemsLabel);
             this.Controls.Add(this.PeopleLabel);
@@ -108,6 +132,8 @@
             this.Controls.Add(this.PeopleListBox);
             this.Name = "People_Items";
             this.Text = "People";
+            ((System.ComponentModel.ISupportInitialize)(this.PeopleDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemsDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,5 +147,7 @@
         private Label PeopleLabel;
         private Label ItemsLabel;
         private Button itemsButton;
+        private DataGridView PeopleDataGridView;
+        private DataGridView ItemsDataGridView;
     }
 }
