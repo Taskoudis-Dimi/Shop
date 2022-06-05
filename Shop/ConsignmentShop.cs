@@ -25,63 +25,12 @@ namespace Shop
         public ConsignmentShop()
         {
             InitializeComponent();
-            //SetupData();
 
-            //itemsBinding.DataSource = store.Items.Where(x => x.Sold == false).ToList();
-            //itemsListBox.DataSource = itemsBinding;
-
-            //itemsListBox.DisplayMember = "Display";
-            //itemsListBox.ValueMember = "Display";
-
-
-            //cartBinding.DataSource = shoppingCartData;
-            //ShoppingCartlistBox.DataSource = cartBinding;
-
-            //ShoppingCartlistBox.DisplayMember = "Display";
-            //ShoppingCartlistBox.ValueMember = "Display";
-
-           
-
-
-            //vendorBinding.DataSource = store.Vendors;
-            //vendorListBox.DataSource = vendorBinding;
-
-            //vendorListBox.DisplayMember = "Display";
-            //vendorListBox.ValueMember = "Display";
 
 
         }
 
-        //public void SetupData()
-        //{
-
-        //    //TODO retrieve data from db
-
-        //    //
-        //    store.Vendors.Add(new Vendor { FirstName = "Bill", LastName = "Smith" });
-        //    store.Vendors.Add(new Vendor { FirstName = "Sue", LastName = "Jones" });
-
-
-        //    //
-        //    store.Items.Add(new Item
-        //    {
-        //        Title = "Moby Dick",
-        //        Description = "A book about a whale",
-        //        Price = 4.50M,
-        //        Owner = store.Vendors[0]
-        //    });
-
-        //    store.Items.Add(new Item
-        //    {
-        //        Title = "Harry Potter Book 1",
-        //        Description = "A book about a boy",
-        //        Price = 4.50M,
-        //        Owner = store.Vendors[1]
-        //    });
-
-        //    store.Name = "Seconds are better";
-
-        //}
+        
 
         private void addToCart_Click(object sender, EventArgs e)
         {
@@ -140,6 +89,19 @@ namespace Shop
 
 
 
+        }
+
+        private void addItemsButton_Click(object sender, EventArgs e)
+        {
+            People_Items frm = new People_Items();
+            frm.ShowDialog();
+
+        }
+
+        private void addPeopleButton_Click(object sender, EventArgs e)
+        {
+            People_Items frm = new People_Items();
+            frm.ShowDialog();
         }
     }
 } 

@@ -41,6 +41,9 @@
             this.storeProfitLabel = new System.Windows.Forms.Label();
             this.storeProfitValue = new System.Windows.Forms.Label();
             this.removeButton = new System.Windows.Forms.Button();
+            this.addItemsButton = new System.Windows.Forms.Button();
+            this.addPeopleButton = new System.Windows.Forms.Button();
+            this.exportButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // headerText
@@ -68,7 +71,7 @@
             // 
             this.ShoppingCartlistBox.FormattingEnabled = true;
             this.ShoppingCartlistBox.ItemHeight = 21;
-            this.ShoppingCartlistBox.Location = new System.Drawing.Point(727, 154);
+            this.ShoppingCartlistBox.Location = new System.Drawing.Point(734, 154);
             this.ShoppingCartlistBox.Name = "ShoppingCartlistBox";
             this.ShoppingCartlistBox.Size = new System.Drawing.Size(280, 151);
             this.ShoppingCartlistBox.TabIndex = 2;
@@ -77,7 +80,7 @@
             // 
             this.itemsListBoxlabel.AutoSize = true;
             this.itemsListBoxlabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.itemsListBoxlabel.Location = new System.Drawing.Point(162, 103);
+            this.itemsListBoxlabel.Location = new System.Drawing.Point(169, 114);
             this.itemsListBoxlabel.Name = "itemsListBoxlabel";
             this.itemsListBoxlabel.Size = new System.Drawing.Size(96, 21);
             this.itemsListBoxlabel.TabIndex = 4;
@@ -85,7 +88,7 @@
             // 
             // addToCartItem
             // 
-            this.addToCartItem.Location = new System.Drawing.Point(480, 231);
+            this.addToCartItem.Location = new System.Drawing.Point(501, 223);
             this.addToCartItem.Name = "addToCartItem";
             this.addToCartItem.Size = new System.Drawing.Size(114, 34);
             this.addToCartItem.TabIndex = 5;
@@ -97,7 +100,7 @@
             // 
             this.ShoppingCartlabel.AutoSize = true;
             this.ShoppingCartlabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ShoppingCartlabel.Location = new System.Drawing.Point(800, 103);
+            this.ShoppingCartlabel.Location = new System.Drawing.Point(824, 114);
             this.ShoppingCartlabel.Name = "ShoppingCartlabel";
             this.ShoppingCartlabel.Size = new System.Drawing.Size(119, 21);
             this.ShoppingCartlabel.TabIndex = 6;
@@ -105,7 +108,7 @@
             // 
             // makePurchase
             // 
-            this.makePurchase.Location = new System.Drawing.Point(775, 391);
+            this.makePurchase.Location = new System.Drawing.Point(800, 338);
             this.makePurchase.Name = "makePurchase";
             this.makePurchase.Size = new System.Drawing.Size(143, 42);
             this.makePurchase.TabIndex = 7;
@@ -117,7 +120,7 @@
             // 
             this.vendorListBoxLabel.AutoSize = true;
             this.vendorListBoxLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.vendorListBoxLabel.Location = new System.Drawing.Point(480, 427);
+            this.vendorListBoxLabel.Location = new System.Drawing.Point(501, 412);
             this.vendorListBoxLabel.Name = "vendorListBoxLabel";
             this.vendorListBoxLabel.Size = new System.Drawing.Size(65, 21);
             this.vendorListBoxLabel.TabIndex = 9;
@@ -127,7 +130,7 @@
             // 
             this.vendorListBox.FormattingEnabled = true;
             this.vendorListBox.ItemHeight = 21;
-            this.vendorListBox.Location = new System.Drawing.Point(402, 471);
+            this.vendorListBox.Location = new System.Drawing.Point(402, 438);
             this.vendorListBox.Name = "vendorListBox";
             this.vendorListBox.Size = new System.Drawing.Size(270, 151);
             this.vendorListBox.TabIndex = 8;
@@ -136,7 +139,7 @@
             // 
             this.storeProfitLabel.AutoSize = true;
             this.storeProfitLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.storeProfitLabel.Location = new System.Drawing.Point(451, 636);
+            this.storeProfitLabel.Location = new System.Drawing.Point(532, 606);
             this.storeProfitLabel.Name = "storeProfitLabel";
             this.storeProfitLabel.Size = new System.Drawing.Size(97, 21);
             this.storeProfitLabel.TabIndex = 10;
@@ -146,7 +149,7 @@
             // 
             this.storeProfitValue.AutoSize = true;
             this.storeProfitValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.storeProfitValue.Location = new System.Drawing.Point(564, 636);
+            this.storeProfitValue.Location = new System.Drawing.Point(553, 627);
             this.storeProfitValue.Name = "storeProfitValue";
             this.storeProfitValue.Size = new System.Drawing.Size(54, 21);
             this.storeProfitValue.TabIndex = 11;
@@ -154,7 +157,7 @@
             // 
             // removeButton
             // 
-            this.removeButton.Location = new System.Drawing.Point(113, 338);
+            this.removeButton.Location = new System.Drawing.Point(256, 338);
             this.removeButton.Name = "removeButton";
             this.removeButton.Size = new System.Drawing.Size(114, 34);
             this.removeButton.TabIndex = 12;
@@ -162,11 +165,43 @@
             this.removeButton.UseVisualStyleBackColor = true;
             this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
             // 
+            // addItemsButton
+            // 
+            this.addItemsButton.Location = new System.Drawing.Point(100, 338);
+            this.addItemsButton.Name = "addItemsButton";
+            this.addItemsButton.Size = new System.Drawing.Size(114, 34);
+            this.addItemsButton.TabIndex = 13;
+            this.addItemsButton.Text = "Add";
+            this.addItemsButton.UseVisualStyleBackColor = true;
+            this.addItemsButton.Click += new System.EventHandler(this.addItemsButton_Click);
+            // 
+            // addPeopleButton
+            // 
+            this.addPeopleButton.Location = new System.Drawing.Point(402, 599);
+            this.addPeopleButton.Name = "addPeopleButton";
+            this.addPeopleButton.Size = new System.Drawing.Size(114, 34);
+            this.addPeopleButton.TabIndex = 14;
+            this.addPeopleButton.Text = "Add";
+            this.addPeopleButton.UseVisualStyleBackColor = true;
+            this.addPeopleButton.Click += new System.EventHandler(this.addPeopleButton_Click);
+            // 
+            // exportButton
+            // 
+            this.exportButton.Location = new System.Drawing.Point(687, 438);
+            this.exportButton.Name = "exportButton";
+            this.exportButton.Size = new System.Drawing.Size(114, 34);
+            this.exportButton.TabIndex = 15;
+            this.exportButton.Text = "Export";
+            this.exportButton.UseVisualStyleBackColor = true;
+            // 
             // ConsignmentShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1094, 679);
+            this.Controls.Add(this.exportButton);
+            this.Controls.Add(this.addPeopleButton);
+            this.Controls.Add(this.addItemsButton);
             this.Controls.Add(this.removeButton);
             this.Controls.Add(this.storeProfitValue);
             this.Controls.Add(this.storeProfitLabel);
@@ -204,5 +239,8 @@
         private Label storeProfitLabel;
         private Label storeProfitValue;
         private Button removeButton;
+        private Button addItemsButton;
+        private Button addPeopleButton;
+        private Button exportButton;
     }
 }

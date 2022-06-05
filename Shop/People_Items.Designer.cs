@@ -36,6 +36,8 @@
             this.itemsButton = new System.Windows.Forms.Button();
             this.PeopleDataGridView = new System.Windows.Forms.DataGridView();
             this.ItemsDataGridView = new System.Windows.Forms.DataGridView();
+            this.sumTextBox = new System.Windows.Forms.TextBox();
+            this.sumButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PeopleDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemsDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -116,12 +118,32 @@
             this.ItemsDataGridView.RowTemplate.Height = 25;
             this.ItemsDataGridView.Size = new System.Drawing.Size(270, 150);
             this.ItemsDataGridView.TabIndex = 9;
+            this.ItemsDataGridView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ItemsDataGridView_MouseDown);
+            // 
+            // sumTextBox
+            // 
+            this.sumTextBox.Location = new System.Drawing.Point(539, 451);
+            this.sumTextBox.Name = "sumTextBox";
+            this.sumTextBox.Size = new System.Drawing.Size(100, 23);
+            this.sumTextBox.TabIndex = 10;
+            // 
+            // sumButton
+            // 
+            this.sumButton.Location = new System.Drawing.Point(444, 451);
+            this.sumButton.Name = "sumButton";
+            this.sumButton.Size = new System.Drawing.Size(75, 23);
+            this.sumButton.TabIndex = 11;
+            this.sumButton.Text = "Sum";
+            this.sumButton.UseVisualStyleBackColor = true;
+            this.sumButton.Click += new System.EventHandler(this.sumButton_Click);
             // 
             // People_Items
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 491);
+            this.Controls.Add(this.sumButton);
+            this.Controls.Add(this.sumTextBox);
             this.Controls.Add(this.ItemsDataGridView);
             this.Controls.Add(this.PeopleDataGridView);
             this.Controls.Add(this.itemsButton);
@@ -132,6 +154,7 @@
             this.Controls.Add(this.PeopleListBox);
             this.Name = "People_Items";
             this.Text = "People";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.People_Items_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.PeopleDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemsDataGridView)).EndInit();
             this.ResumeLayout(false);
@@ -149,5 +172,7 @@
         private Button itemsButton;
         private DataGridView PeopleDataGridView;
         private DataGridView ItemsDataGridView;
+        private TextBox sumTextBox;
+        private Button sumButton;
     }
 }

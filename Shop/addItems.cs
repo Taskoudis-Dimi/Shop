@@ -21,6 +21,7 @@ namespace Shop
 
 
 
+            
         }
 
         private void display()
@@ -34,7 +35,7 @@ namespace Shop
             try
             {
                 Connection loaddata = new Connection();
-                loaddata.commandExc("Insert Into Items Values(" + TitleTextBox.Text + ",'" + DescriptionTextBox.Text + "','" + PriceTextBox.Text + "')");
+                loaddata.commandExc("Insert Into Items Values(" + PriceTextBox.Text + ",'" + DescriptionTextBox.Text + "','" + TitleTextBox.Text + "')");
                 MessageBox.Show("Success!");
                 //display();
 

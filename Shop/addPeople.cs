@@ -24,7 +24,7 @@ namespace Shop
             try
             {
                 Connection loaddata = new Connection();
-                loaddata.commandExc("Insert Into People values(" + FirstNameTextBox.Text + ",'" + LastNameTextBox.Text + "','" + PhoneTextBox.Text + "')"); 
+                loaddata.commandExc("Insert Into People Values(" + PhoneTextBox.Text + ",'" + FirstNameTextBox.Text + "','" + LastNameTextBox.Text + "')");
                 MessageBox.Show("Succes Insert");
             }
             catch (Exception ex)
