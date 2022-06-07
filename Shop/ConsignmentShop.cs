@@ -21,26 +21,36 @@ namespace Shop
         BindingSource vendorBinding = new BindingSource();
         private decimal storeProfit = 0;
 
+        Connection loaddata = new Connection();
 
         public ConsignmentShop()
         {
             InitializeComponent();
 
-
-
+            display();
         }
 
-        
+        private void display()
+        {
+            Connection loaddata = new Connection();
+            loaddata.retrieveData("Select * From Items");
+            storeItemsDataGridView.DataSource = loaddata.table;
+
+
+            Connection loaddata2 = new Connection();
+            loaddata2.retrieveData("Select * From People");
+            vendorDataGridView.DataSource = loaddata2.table;
+        }
 
         private void addToCart_Click(object sender, EventArgs e)
         {
             //Figure out what is selected from the items list
             //Copy that item to the shopping cart
             //Do we remove the item from the items list? no
-            Item selectedItem = (Item)itemsListBox.SelectedItem;
+            //Item selectedItem = (Item)itemsData.SelectedItem;
 
             //
-            shoppingCartData.Add(selectedItem);
+            //shoppingCartData.Add(selectedItem);
 
             cartBinding.ResetBindings(false);
 
@@ -102,6 +112,20 @@ namespace Shop
         {
             People_Items frm = new People_Items();
             frm.ShowDialog();
+        }
+
+        private void ConsignmentShop_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ConsignmentShop_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure to exit from app", "Exit", MessageBoxButtons.YesNo);
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 } 

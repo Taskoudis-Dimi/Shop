@@ -30,20 +30,24 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsignmentShop));
             this.headerText = new System.Windows.Forms.Label();
-            this.itemsListBox = new System.Windows.Forms.ListBox();
-            this.ShoppingCartlistBox = new System.Windows.Forms.ListBox();
             this.itemsListBoxlabel = new System.Windows.Forms.Label();
             this.addToCartItem = new System.Windows.Forms.Button();
             this.ShoppingCartlabel = new System.Windows.Forms.Label();
             this.makePurchase = new System.Windows.Forms.Button();
             this.vendorListBoxLabel = new System.Windows.Forms.Label();
-            this.vendorListBox = new System.Windows.Forms.ListBox();
             this.storeProfitLabel = new System.Windows.Forms.Label();
             this.storeProfitValue = new System.Windows.Forms.Label();
             this.removeButton = new System.Windows.Forms.Button();
             this.addItemsButton = new System.Windows.Forms.Button();
             this.addPeopleButton = new System.Windows.Forms.Button();
             this.exportButton = new System.Windows.Forms.Button();
+            this.storeItemsDataGridView = new System.Windows.Forms.DataGridView();
+            this.shoppingCartDataGridView = new System.Windows.Forms.DataGridView();
+            this.vendorDataGridView = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.storeItemsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shoppingCartDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vendorDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // headerText
@@ -56,31 +60,11 @@
             this.headerText.TabIndex = 0;
             this.headerText.Text = "Consignment Shop";
             // 
-            // itemsListBox
-            // 
-            this.itemsListBox.FormattingEnabled = true;
-            this.itemsListBox.ItemHeight = 21;
-            this.itemsListBox.Location = new System.Drawing.Point(100, 154);
-            this.itemsListBox.Name = "itemsListBox";
-            this.itemsListBox.Size = new System.Drawing.Size(270, 151);
-            this.itemsListBox.TabIndex = 1;
-            this.itemsListBox.SelectedIndexChanged += new System.EventHandler(this.itemsListBox_SelectedIndexChanged);
-            this.itemsListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.itemsListBox_MouseDown);
-            // 
-            // ShoppingCartlistBox
-            // 
-            this.ShoppingCartlistBox.FormattingEnabled = true;
-            this.ShoppingCartlistBox.ItemHeight = 21;
-            this.ShoppingCartlistBox.Location = new System.Drawing.Point(734, 154);
-            this.ShoppingCartlistBox.Name = "ShoppingCartlistBox";
-            this.ShoppingCartlistBox.Size = new System.Drawing.Size(280, 151);
-            this.ShoppingCartlistBox.TabIndex = 2;
-            // 
             // itemsListBoxlabel
             // 
             this.itemsListBoxlabel.AutoSize = true;
             this.itemsListBoxlabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.itemsListBoxlabel.Location = new System.Drawing.Point(169, 114);
+            this.itemsListBoxlabel.Location = new System.Drawing.Point(81, 114);
             this.itemsListBoxlabel.Name = "itemsListBoxlabel";
             this.itemsListBoxlabel.Size = new System.Drawing.Size(96, 21);
             this.itemsListBoxlabel.TabIndex = 4;
@@ -88,7 +72,7 @@
             // 
             // addToCartItem
             // 
-            this.addToCartItem.Location = new System.Drawing.Point(501, 223);
+            this.addToCartItem.Location = new System.Drawing.Point(313, 212);
             this.addToCartItem.Name = "addToCartItem";
             this.addToCartItem.Size = new System.Drawing.Size(114, 34);
             this.addToCartItem.TabIndex = 5;
@@ -100,7 +84,7 @@
             // 
             this.ShoppingCartlabel.AutoSize = true;
             this.ShoppingCartlabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ShoppingCartlabel.Location = new System.Drawing.Point(824, 114);
+            this.ShoppingCartlabel.Location = new System.Drawing.Point(490, 114);
             this.ShoppingCartlabel.Name = "ShoppingCartlabel";
             this.ShoppingCartlabel.Size = new System.Drawing.Size(119, 21);
             this.ShoppingCartlabel.TabIndex = 6;
@@ -108,9 +92,9 @@
             // 
             // makePurchase
             // 
-            this.makePurchase.Location = new System.Drawing.Point(800, 338);
+            this.makePurchase.Location = new System.Drawing.Point(771, 212);
             this.makePurchase.Name = "makePurchase";
-            this.makePurchase.Size = new System.Drawing.Size(143, 42);
+            this.makePurchase.Size = new System.Drawing.Size(124, 34);
             this.makePurchase.TabIndex = 7;
             this.makePurchase.Text = "Purchase";
             this.makePurchase.UseVisualStyleBackColor = true;
@@ -120,26 +104,17 @@
             // 
             this.vendorListBoxLabel.AutoSize = true;
             this.vendorListBoxLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.vendorListBoxLabel.Location = new System.Drawing.Point(501, 412);
+            this.vendorListBoxLabel.Location = new System.Drawing.Point(1036, 131);
             this.vendorListBoxLabel.Name = "vendorListBoxLabel";
             this.vendorListBoxLabel.Size = new System.Drawing.Size(65, 21);
             this.vendorListBoxLabel.TabIndex = 9;
             this.vendorListBoxLabel.Text = "Vendor";
             // 
-            // vendorListBox
-            // 
-            this.vendorListBox.FormattingEnabled = true;
-            this.vendorListBox.ItemHeight = 21;
-            this.vendorListBox.Location = new System.Drawing.Point(402, 438);
-            this.vendorListBox.Name = "vendorListBox";
-            this.vendorListBox.Size = new System.Drawing.Size(270, 151);
-            this.vendorListBox.TabIndex = 8;
-            // 
             // storeProfitLabel
             // 
             this.storeProfitLabel.AutoSize = true;
             this.storeProfitLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.storeProfitLabel.Location = new System.Drawing.Point(532, 606);
+            this.storeProfitLabel.Location = new System.Drawing.Point(1248, 321);
             this.storeProfitLabel.Name = "storeProfitLabel";
             this.storeProfitLabel.Size = new System.Drawing.Size(97, 21);
             this.storeProfitLabel.TabIndex = 10;
@@ -149,7 +124,7 @@
             // 
             this.storeProfitValue.AutoSize = true;
             this.storeProfitValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.storeProfitValue.Location = new System.Drawing.Point(553, 627);
+            this.storeProfitValue.Location = new System.Drawing.Point(1269, 342);
             this.storeProfitValue.Name = "storeProfitValue";
             this.storeProfitValue.Size = new System.Drawing.Size(54, 21);
             this.storeProfitValue.TabIndex = 11;
@@ -157,7 +132,7 @@
             // 
             // removeButton
             // 
-            this.removeButton.Location = new System.Drawing.Point(256, 338);
+            this.removeButton.Location = new System.Drawing.Point(168, 321);
             this.removeButton.Name = "removeButton";
             this.removeButton.Size = new System.Drawing.Size(114, 34);
             this.removeButton.TabIndex = 12;
@@ -167,7 +142,7 @@
             // 
             // addItemsButton
             // 
-            this.addItemsButton.Location = new System.Drawing.Point(100, 338);
+            this.addItemsButton.Location = new System.Drawing.Point(12, 321);
             this.addItemsButton.Name = "addItemsButton";
             this.addItemsButton.Size = new System.Drawing.Size(114, 34);
             this.addItemsButton.TabIndex = 13;
@@ -177,7 +152,7 @@
             // 
             // addPeopleButton
             // 
-            this.addPeopleButton.Location = new System.Drawing.Point(402, 599);
+            this.addPeopleButton.Location = new System.Drawing.Point(946, 321);
             this.addPeopleButton.Name = "addPeopleButton";
             this.addPeopleButton.Size = new System.Drawing.Size(114, 34);
             this.addPeopleButton.TabIndex = 14;
@@ -187,18 +162,58 @@
             // 
             // exportButton
             // 
-            this.exportButton.Location = new System.Drawing.Point(687, 438);
+            this.exportButton.Location = new System.Drawing.Point(1222, 157);
             this.exportButton.Name = "exportButton";
             this.exportButton.Size = new System.Drawing.Size(114, 34);
             this.exportButton.TabIndex = 15;
             this.exportButton.Text = "Export";
             this.exportButton.UseVisualStyleBackColor = true;
             // 
+            // storeItemsDataGridView
+            // 
+            this.storeItemsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.storeItemsDataGridView.Location = new System.Drawing.Point(12, 155);
+            this.storeItemsDataGridView.Name = "storeItemsDataGridView";
+            this.storeItemsDataGridView.RowTemplate.Height = 25;
+            this.storeItemsDataGridView.Size = new System.Drawing.Size(270, 150);
+            this.storeItemsDataGridView.TabIndex = 16;
+            // 
+            // shoppingCartDataGridView
+            // 
+            this.shoppingCartDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.shoppingCartDataGridView.Location = new System.Drawing.Point(466, 155);
+            this.shoppingCartDataGridView.Name = "shoppingCartDataGridView";
+            this.shoppingCartDataGridView.RowTemplate.Height = 25;
+            this.shoppingCartDataGridView.Size = new System.Drawing.Size(270, 150);
+            this.shoppingCartDataGridView.TabIndex = 17;
+            // 
+            // vendorDataGridView
+            // 
+            this.vendorDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.vendorDataGridView.Location = new System.Drawing.Point(946, 155);
+            this.vendorDataGridView.Name = "vendorDataGridView";
+            this.vendorDataGridView.RowTemplate.Height = 25;
+            this.vendorDataGridView.Size = new System.Drawing.Size(270, 150);
+            this.vendorDataGridView.TabIndex = 18;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1080, 321);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(114, 34);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Remove";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // ConsignmentShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1094, 679);
+            this.ClientSize = new System.Drawing.Size(1484, 423);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.vendorDataGridView);
+            this.Controls.Add(this.shoppingCartDataGridView);
+            this.Controls.Add(this.storeItemsDataGridView);
             this.Controls.Add(this.exportButton);
             this.Controls.Add(this.addPeopleButton);
             this.Controls.Add(this.addItemsButton);
@@ -206,13 +221,10 @@
             this.Controls.Add(this.storeProfitValue);
             this.Controls.Add(this.storeProfitLabel);
             this.Controls.Add(this.vendorListBoxLabel);
-            this.Controls.Add(this.vendorListBox);
             this.Controls.Add(this.makePurchase);
             this.Controls.Add(this.ShoppingCartlabel);
             this.Controls.Add(this.addToCartItem);
             this.Controls.Add(this.itemsListBoxlabel);
-            this.Controls.Add(this.ShoppingCartlistBox);
-            this.Controls.Add(this.itemsListBox);
             this.Controls.Add(this.headerText);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -220,6 +232,11 @@
             this.Name = "ConsignmentShop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consignment Shop";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ConsignmentShop_FormClosing);
+            this.Load += new System.EventHandler(this.ConsignmentShop_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.storeItemsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shoppingCartDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vendorDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,19 +245,20 @@
         #endregion
 
         private Label headerText;
-        private ListBox itemsListBox;
-        private ListBox ShoppingCartlistBox;
         private Label itemsListBoxlabel;
         private Button addToCartItem;
         private Label ShoppingCartlabel;
         private Button makePurchase;
         private Label vendorListBoxLabel;
-        private ListBox vendorListBox;
         private Label storeProfitLabel;
         private Label storeProfitValue;
         private Button removeButton;
         private Button addItemsButton;
         private Button addPeopleButton;
         private Button exportButton;
+        private DataGridView storeItemsDataGridView;
+        private DataGridView shoppingCartDataGridView;
+        private DataGridView vendorDataGridView;
+        private Button button1;
     }
 }

@@ -23,7 +23,8 @@ namespace Shop
         private void EditButton_Click(object sender, EventArgs e)
         {
 
-            loaddata.commandExc("Update Items set Price='" + PriceTextBox.Text + "',Description='" + DescriptionTextBox.Text + "',Title='" + TitleTextBox.Text + ";");
+            loaddata.retrieveData("Update Items set Price='" + PriceTextBox.Text + "',Description='" + DescriptionTextBox.Text + "',Title='" + TitleTextBox.Text + ";");
+
 
             MessageBox.Show("Product added successfuly");
         }
