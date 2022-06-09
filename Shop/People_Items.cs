@@ -122,7 +122,7 @@ namespace Shop
 
         private void People_Items_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult result = MessageBox.Show("Confirm To Close App", "Exit", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Confirm To Close Edit", "Exit", MessageBoxButtons.YesNo);
             if (result == DialogResult.No)
             {
                 e.Cancel = true;
@@ -137,7 +137,7 @@ namespace Shop
             {
                 if (Convert.ToBoolean(ItemsDataGridView.Rows[i].Cells[0].Value) == true)
                 {
-                    sum += double.Parse(ItemsDataGridView.Rows[i].Cells[1].Value.ToString());
+                    sum += double.Parse(ItemsDataGridView.Rows[i].Cells[3].Value.ToString());
 
                 }
             }

@@ -46,7 +46,7 @@
             // 
             this.PeopleListBox.FormattingEnabled = true;
             this.PeopleListBox.ItemHeight = 15;
-            this.PeopleListBox.Location = new System.Drawing.Point(76, 299);
+            this.PeopleListBox.Location = new System.Drawing.Point(12, 299);
             this.PeopleListBox.Name = "PeopleListBox";
             this.PeopleListBox.Size = new System.Drawing.Size(270, 139);
             this.PeopleListBox.TabIndex = 2;
@@ -62,7 +62,7 @@
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(76, 232);
+            this.addButton.Location = new System.Drawing.Point(12, 224);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(75, 23);
             this.addButton.TabIndex = 4;
@@ -74,7 +74,7 @@
             // 
             this.PeopleLabel.AutoSize = true;
             this.PeopleLabel.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PeopleLabel.Location = new System.Drawing.Point(85, 24);
+            this.PeopleLabel.Location = new System.Drawing.Point(4, 24);
             this.PeopleLabel.Name = "PeopleLabel";
             this.PeopleLabel.Size = new System.Drawing.Size(103, 40);
             this.PeopleLabel.TabIndex = 5;
@@ -84,7 +84,7 @@
             // 
             this.ItemsLabel.AutoSize = true;
             this.ItemsLabel.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ItemsLabel.Location = new System.Drawing.Point(444, 24);
+            this.ItemsLabel.Location = new System.Drawing.Point(424, 24);
             this.ItemsLabel.Name = "ItemsLabel";
             this.ItemsLabel.Size = new System.Drawing.Size(87, 40);
             this.ItemsLabel.TabIndex = 6;
@@ -92,7 +92,7 @@
             // 
             // itemsButton
             // 
-            this.itemsButton.Location = new System.Drawing.Point(444, 223);
+            this.itemsButton.Location = new System.Drawing.Point(424, 223);
             this.itemsButton.Name = "itemsButton";
             this.itemsButton.Size = new System.Drawing.Size(75, 23);
             this.itemsButton.TabIndex = 7;
@@ -103,10 +103,10 @@
             // PeopleDataGridView
             // 
             this.PeopleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.PeopleDataGridView.Location = new System.Drawing.Point(76, 67);
+            this.PeopleDataGridView.Location = new System.Drawing.Point(4, 67);
             this.PeopleDataGridView.Name = "PeopleDataGridView";
             this.PeopleDataGridView.RowTemplate.Height = 25;
-            this.PeopleDataGridView.Size = new System.Drawing.Size(264, 150);
+            this.PeopleDataGridView.Size = new System.Drawing.Size(394, 150);
             this.PeopleDataGridView.TabIndex = 8;
             this.PeopleDataGridView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PeopleDataGridView_MouseDown_1);
             // 
@@ -116,20 +116,20 @@
             this.ItemsDataGridView.Location = new System.Drawing.Point(424, 67);
             this.ItemsDataGridView.Name = "ItemsDataGridView";
             this.ItemsDataGridView.RowTemplate.Height = 25;
-            this.ItemsDataGridView.Size = new System.Drawing.Size(270, 150);
+            this.ItemsDataGridView.Size = new System.Drawing.Size(356, 150);
             this.ItemsDataGridView.TabIndex = 9;
             this.ItemsDataGridView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ItemsDataGridView_MouseDown);
             // 
             // sumTextBox
             // 
-            this.sumTextBox.Location = new System.Drawing.Point(606, 224);
+            this.sumTextBox.Location = new System.Drawing.Point(586, 223);
             this.sumTextBox.Name = "sumTextBox";
             this.sumTextBox.Size = new System.Drawing.Size(88, 23);
             this.sumTextBox.TabIndex = 10;
             // 
             // sumButton
             // 
-            this.sumButton.Location = new System.Drawing.Point(525, 224);
+            this.sumButton.Location = new System.Drawing.Point(505, 224);
             this.sumButton.Name = "sumButton";
             this.sumButton.Size = new System.Drawing.Size(75, 23);
             this.sumButton.TabIndex = 11;
@@ -141,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(752, 470);
+            this.ClientSize = new System.Drawing.Size(792, 470);
             this.Controls.Add(this.sumButton);
             this.Controls.Add(this.sumTextBox);
             this.Controls.Add(this.ItemsDataGridView);

@@ -44,7 +44,10 @@
             this.storeItemsDataGridView = new System.Windows.Forms.DataGridView();
             this.shoppingCartDataGridView = new System.Windows.Forms.DataGridView();
             this.vendorDataGridView = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.sumButton = new System.Windows.Forms.Button();
+            this.refreshButton = new System.Windows.Forms.Button();
+            this.refresh2Button = new System.Windows.Forms.Button();
+            this.sumTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.storeItemsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shoppingCartDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vendorDataGridView)).BeginInit();
@@ -72,7 +75,7 @@
             // 
             // addToCartItem
             // 
-            this.addToCartItem.Location = new System.Drawing.Point(313, 212);
+            this.addToCartItem.Location = new System.Drawing.Point(326, 212);
             this.addToCartItem.Name = "addToCartItem";
             this.addToCartItem.Size = new System.Drawing.Size(114, 34);
             this.addToCartItem.TabIndex = 5;
@@ -114,7 +117,7 @@
             // 
             this.storeProfitLabel.AutoSize = true;
             this.storeProfitLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.storeProfitLabel.Location = new System.Drawing.Point(1248, 321);
+            this.storeProfitLabel.Location = new System.Drawing.Point(1294, 345);
             this.storeProfitLabel.Name = "storeProfitLabel";
             this.storeProfitLabel.Size = new System.Drawing.Size(97, 21);
             this.storeProfitLabel.TabIndex = 10;
@@ -124,7 +127,7 @@
             // 
             this.storeProfitValue.AutoSize = true;
             this.storeProfitValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.storeProfitValue.Location = new System.Drawing.Point(1269, 342);
+            this.storeProfitValue.Location = new System.Drawing.Point(1315, 366);
             this.storeProfitValue.Name = "storeProfitValue";
             this.storeProfitValue.Size = new System.Drawing.Size(54, 21);
             this.storeProfitValue.TabIndex = 11;
@@ -132,9 +135,9 @@
             // 
             // removeButton
             // 
-            this.removeButton.Location = new System.Drawing.Point(168, 321);
+            this.removeButton.Location = new System.Drawing.Point(100, 315);
             this.removeButton.Name = "removeButton";
-            this.removeButton.Size = new System.Drawing.Size(114, 34);
+            this.removeButton.Size = new System.Drawing.Size(77, 33);
             this.removeButton.TabIndex = 12;
             this.removeButton.Text = "Remove";
             this.removeButton.UseVisualStyleBackColor = true;
@@ -142,9 +145,9 @@
             // 
             // addItemsButton
             // 
-            this.addItemsButton.Location = new System.Drawing.Point(12, 321);
+            this.addItemsButton.Location = new System.Drawing.Point(12, 314);
             this.addItemsButton.Name = "addItemsButton";
-            this.addItemsButton.Size = new System.Drawing.Size(114, 34);
+            this.addItemsButton.Size = new System.Drawing.Size(58, 34);
             this.addItemsButton.TabIndex = 13;
             this.addItemsButton.Text = "Add";
             this.addItemsButton.UseVisualStyleBackColor = true;
@@ -152,9 +155,9 @@
             // 
             // addPeopleButton
             // 
-            this.addPeopleButton.Location = new System.Drawing.Point(946, 321);
+            this.addPeopleButton.Location = new System.Drawing.Point(946, 315);
             this.addPeopleButton.Name = "addPeopleButton";
-            this.addPeopleButton.Size = new System.Drawing.Size(114, 34);
+            this.addPeopleButton.Size = new System.Drawing.Size(55, 33);
             this.addPeopleButton.TabIndex = 14;
             this.addPeopleButton.Text = "Add";
             this.addPeopleButton.UseVisualStyleBackColor = true;
@@ -162,9 +165,9 @@
             // 
             // exportButton
             // 
-            this.exportButton.Location = new System.Drawing.Point(1222, 157);
+            this.exportButton.Location = new System.Drawing.Point(1288, 155);
             this.exportButton.Name = "exportButton";
-            this.exportButton.Size = new System.Drawing.Size(114, 34);
+            this.exportButton.Size = new System.Drawing.Size(81, 34);
             this.exportButton.TabIndex = 15;
             this.exportButton.Text = "Export";
             this.exportButton.UseVisualStyleBackColor = true;
@@ -175,42 +178,72 @@
             this.storeItemsDataGridView.Location = new System.Drawing.Point(12, 155);
             this.storeItemsDataGridView.Name = "storeItemsDataGridView";
             this.storeItemsDataGridView.RowTemplate.Height = 25;
-            this.storeItemsDataGridView.Size = new System.Drawing.Size(270, 150);
+            this.storeItemsDataGridView.Size = new System.Drawing.Size(295, 150);
             this.storeItemsDataGridView.TabIndex = 16;
             // 
             // shoppingCartDataGridView
             // 
             this.shoppingCartDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.shoppingCartDataGridView.Location = new System.Drawing.Point(466, 155);
+            this.shoppingCartDataGridView.Location = new System.Drawing.Point(446, 155);
             this.shoppingCartDataGridView.Name = "shoppingCartDataGridView";
             this.shoppingCartDataGridView.RowTemplate.Height = 25;
-            this.shoppingCartDataGridView.Size = new System.Drawing.Size(270, 150);
+            this.shoppingCartDataGridView.Size = new System.Drawing.Size(319, 150);
             this.shoppingCartDataGridView.TabIndex = 17;
             // 
             // vendorDataGridView
             // 
             this.vendorDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.vendorDataGridView.Location = new System.Drawing.Point(946, 155);
+            this.vendorDataGridView.Location = new System.Drawing.Point(901, 155);
             this.vendorDataGridView.Name = "vendorDataGridView";
             this.vendorDataGridView.RowTemplate.Height = 25;
-            this.vendorDataGridView.Size = new System.Drawing.Size(270, 150);
+            this.vendorDataGridView.Size = new System.Drawing.Size(370, 150);
             this.vendorDataGridView.TabIndex = 18;
             // 
-            // button1
+            // sumButton
             // 
-            this.button1.Location = new System.Drawing.Point(1080, 321);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 34);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Remove";
-            this.button1.UseVisualStyleBackColor = true;
+            this.sumButton.Location = new System.Drawing.Point(466, 311);
+            this.sumButton.Name = "sumButton";
+            this.sumButton.Size = new System.Drawing.Size(61, 34);
+            this.sumButton.TabIndex = 20;
+            this.sumButton.Text = "Sum";
+            this.sumButton.UseVisualStyleBackColor = true;
+            this.sumButton.Click += new System.EventHandler(this.sumButton_Click);
+            // 
+            // refreshButton
+            // 
+            this.refreshButton.Location = new System.Drawing.Point(209, 315);
+            this.refreshButton.Name = "refreshButton";
+            this.refreshButton.Size = new System.Drawing.Size(73, 33);
+            this.refreshButton.TabIndex = 21;
+            this.refreshButton.Text = "Refresh";
+            this.refreshButton.UseVisualStyleBackColor = true;
+            // 
+            // refresh2Button
+            // 
+            this.refresh2Button.Location = new System.Drawing.Point(1143, 314);
+            this.refresh2Button.Name = "refresh2Button";
+            this.refresh2Button.Size = new System.Drawing.Size(73, 32);
+            this.refresh2Button.TabIndex = 22;
+            this.refresh2Button.Text = "Refresh";
+            this.refresh2Button.UseVisualStyleBackColor = true;
+            this.refresh2Button.Click += new System.EventHandler(this.refresh2Button_Click);
+            // 
+            // sumTextBox
+            // 
+            this.sumTextBox.Location = new System.Drawing.Point(542, 314);
+            this.sumTextBox.Name = "sumTextBox";
+            this.sumTextBox.Size = new System.Drawing.Size(88, 29);
+            this.sumTextBox.TabIndex = 23;
             // 
             // ConsignmentShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1484, 423);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1395, 423);
+            this.Controls.Add(this.sumTextBox);
+            this.Controls.Add(this.refresh2Button);
+            this.Controls.Add(this.refreshButton);
+            this.Controls.Add(this.sumButton);
             this.Controls.Add(this.vendorDataGridView);
             this.Controls.Add(this.shoppingCartDataGridView);
             this.Controls.Add(this.storeItemsDataGridView);
@@ -259,6 +292,9 @@
         private DataGridView storeItemsDataGridView;
         private DataGridView shoppingCartDataGridView;
         private DataGridView vendorDataGridView;
-        private Button button1;
+        private Button sumButton;
+        private Button refreshButton;
+        private Button refresh2Button;
+        private TextBox sumTextBox;
     }
 }

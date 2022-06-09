@@ -40,6 +40,19 @@ namespace Shop
             Connection loaddata2 = new Connection();
             loaddata2.retrieveData("Select * From People");
             vendorDataGridView.DataSource = loaddata2.table;
+
+
+            shoppingCartDataGridView.ColumnCount = 3;
+            shoppingCartDataGridView.Columns[0].Name = "Title";
+            shoppingCartDataGridView.Columns[1].Name = "Description";
+            shoppingCartDataGridView.Columns[2].Name = "Price";
+
+            vendorDataGridView.Columns.Add("Price", "Price");
+
+
+            storeItemsDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            shoppingCartDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
         }
 
         private void addToCart_Click(object sender, EventArgs e)
@@ -47,12 +60,21 @@ namespace Shop
             //Figure out what is selected from the items list
             //Copy that item to the shopping cart
             //Do we remove the item from the items list? no
-            //Item selectedItem = (Item)itemsData.SelectedItem;
 
-            //
-            //shoppingCartData.Add(selectedItem);
 
-            cartBinding.ResetBindings(false);
+
+            foreach (DataGridViewRow row in storeItemsDataGridView.SelectedRows)
+            {
+                object[] rowData = new object[row.Cells.Count];
+                for (int i = 0; i < rowData.Length; ++i)
+                {
+                    rowData[i] = row.Cells[i].Value;
+                }
+                this.shoppingCartDataGridView.Rows.Add(rowData);
+            }
+
+
+
 
         }
 
@@ -70,36 +92,39 @@ namespace Shop
             }
             shoppingCartData.Clear();
 
-            itemsBinding.DataSource = store.Items.Where(x => x.Sold == false).ToList();
 
-            storeProfitValue.Text = String.Format("${0}", storeProfit);
+            foreach (DataGridViewRow row in shoppingCartDataGridView.SelectedRows)
+            {
+                object[] rowData = new object[row.Cells.Count];
+                for (int i = 0; i < rowData.Length; ++i)
+                {
+                    rowData[i] = row.Cells[i].Value;
+                }
+                this.shoppingCartDataGridView.Rows.Add(rowData);
 
-            cartBinding.ResetBindings(false);
-            itemsBinding.ResetBindings(false);
-            vendorBinding.ResetBindings(false);
-            
 
+
+
+                //itemsBinding.DataSource = store.Items.Where(x => x.Sold == false).ToList();
+
+                //storeProfitValue.Text = String.Format("${0}", storeProfit);
+
+                //cartBinding.ResetBindings(false);
+                //itemsBinding.ResetBindings(false);
+                //vendorBinding.ResetBindings(false);
+
+            }
         }
-
         private void removeButton_Click(object sender, EventArgs e)
         {
-
-            //itemsListBox.Items.RemoveAt(itemsListBox.SelectedIndex);
-
+            loaddata.commandExc("Delete From Items Where Price=" + storeItemsDataGridView.CurrentRow.Cells[2].Value.ToString() + "");
+            foreach (DataGridViewRow row in storeItemsDataGridView.Rows)
+            {
+                storeItemsDataGridView.Rows.RemoveAt(row.Index);
+            }
         }
 
-        private void itemsListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void itemsListBox_MouseDown(object sender, MouseEventArgs e)
-        {
-
-
-
-
-        }
 
         private void addItemsButton_Click(object sender, EventArgs e)
         {
@@ -127,5 +152,50 @@ namespace Shop
                 e.Cancel = true;
             }
         }
+
+
+
+        private void itemsListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void itemsListBox_MouseDown(object sender, MouseEventArgs e)
+        {
+
+
+
+
+        }
+
+        private void refresh2Button_Click(object sender, EventArgs e)
+        {
+            loaddata.retrieveData("Select * From People");
+
+        }
+
+
+        private void sumButton_Click(object sender, EventArgs e)
+        {
+            CalcSum();
+        }
+
+        private void CalcSum()
+        {
+            double sum = 0;
+            for (int i = 0; i < shoppingCartDataGridView.Rows.Count; i++)
+            {
+                if (Convert.ToBoolean(shoppingCartDataGridView.Rows[i].Cells[0].Value) == true)
+                {
+                    sum += double.Parse(shoppingCartDataGridView.Rows[i].Cells[3].Value.ToString());
+
+                }
+            }
+
+            sumTextBox.Text = sum.ToString();
+        }
+
+
     }
-} 
+
+}
