@@ -62,9 +62,9 @@ namespace Shop
         private void mnuEditPeople_Click(object sender, EventArgs e)
         {
             EditPeople frm = new EditPeople();
-            frm.FirstNameTextBox.Text = PeopleDataGridView.CurrentRow.Cells[1].Value.ToString();
-            frm.LastNameTextBox.Text = PeopleDataGridView.CurrentRow.Cells[2].Value.ToString();
-            frm.PhoneTextBox.Text = PeopleDataGridView.CurrentRow.Cells[3].Value.ToString();
+            frm.FirstNameTextBox.Text = PeopleDataGridView.CurrentRow.Cells[0].Value.ToString();
+            frm.LastNameTextBox.Text = PeopleDataGridView.CurrentRow.Cells[1].Value.ToString();
+            frm.PhoneTextBox.Text = PeopleDataGridView.CurrentRow.Cells[2].Value.ToString();
             frm.ShowDialog();
         }
 
@@ -115,9 +115,9 @@ namespace Shop
         private void editButton_Click(object sender, EventArgs e)
         {
             EditPeople frm = new EditPeople();
-            frm.FirstNameTextBox.Text = PeopleDataGridView.CurrentRow.Cells[1].Value.ToString();
-            frm.LastNameTextBox.Text = PeopleDataGridView.CurrentRow.Cells[2].Value.ToString();
-            frm.PhoneTextBox.Text = PeopleDataGridView.CurrentRow.Cells[3].Value.ToString();
+            frm.FirstNameTextBox.Text = PeopleDataGridView.CurrentRow.Cells[0].Value.ToString();
+            frm.LastNameTextBox.Text = PeopleDataGridView.CurrentRow.Cells[1].Value.ToString();
+            frm.PhoneTextBox.Text = PeopleDataGridView.CurrentRow.Cells[2].Value.ToString();
             frm.ShowDialog();
         }
     }
