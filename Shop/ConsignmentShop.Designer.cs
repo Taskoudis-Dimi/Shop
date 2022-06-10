@@ -48,6 +48,9 @@
             this.refreshButton = new System.Windows.Forms.Button();
             this.refresh2Button = new System.Windows.Forms.Button();
             this.sumTextBox = new System.Windows.Forms.TextBox();
+            this.remove2Button = new System.Windows.Forms.Button();
+            this.editButton = new System.Windows.Forms.Button();
+            this.edit2Button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.storeItemsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shoppingCartDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vendorDataGridView)).BeginInit();
@@ -135,7 +138,7 @@
             // 
             // removeButton
             // 
-            this.removeButton.Location = new System.Drawing.Point(100, 315);
+            this.removeButton.Location = new System.Drawing.Point(151, 314);
             this.removeButton.Name = "removeButton";
             this.removeButton.Size = new System.Drawing.Size(77, 33);
             this.removeButton.TabIndex = 12;
@@ -155,7 +158,7 @@
             // 
             // addPeopleButton
             // 
-            this.addPeopleButton.Location = new System.Drawing.Point(946, 315);
+            this.addPeopleButton.Location = new System.Drawing.Point(901, 313);
             this.addPeopleButton.Name = "addPeopleButton";
             this.addPeopleButton.Size = new System.Drawing.Size(55, 33);
             this.addPeopleButton.TabIndex = 14;
@@ -171,6 +174,7 @@
             this.exportButton.TabIndex = 15;
             this.exportButton.Text = "Export";
             this.exportButton.UseVisualStyleBackColor = true;
+            this.exportButton.Click += new System.EventHandler(this.exportButton_Click);
             // 
             // storeItemsDataGridView
             // 
@@ -180,6 +184,7 @@
             this.storeItemsDataGridView.RowTemplate.Height = 25;
             this.storeItemsDataGridView.Size = new System.Drawing.Size(295, 150);
             this.storeItemsDataGridView.TabIndex = 16;
+            this.storeItemsDataGridView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.storeItemsDataGridView_MouseDown);
             // 
             // shoppingCartDataGridView
             // 
@@ -196,8 +201,9 @@
             this.vendorDataGridView.Location = new System.Drawing.Point(901, 155);
             this.vendorDataGridView.Name = "vendorDataGridView";
             this.vendorDataGridView.RowTemplate.Height = 25;
-            this.vendorDataGridView.Size = new System.Drawing.Size(370, 150);
+            this.vendorDataGridView.Size = new System.Drawing.Size(381, 150);
             this.vendorDataGridView.TabIndex = 18;
+            this.vendorDataGridView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.vendorDataGridView_MouseDown);
             // 
             // sumButton
             // 
@@ -211,16 +217,17 @@
             // 
             // refreshButton
             // 
-            this.refreshButton.Location = new System.Drawing.Point(209, 315);
+            this.refreshButton.Location = new System.Drawing.Point(234, 313);
             this.refreshButton.Name = "refreshButton";
             this.refreshButton.Size = new System.Drawing.Size(73, 33);
             this.refreshButton.TabIndex = 21;
             this.refreshButton.Text = "Refresh";
             this.refreshButton.UseVisualStyleBackColor = true;
+            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
             // refresh2Button
             // 
-            this.refresh2Button.Location = new System.Drawing.Point(1143, 314);
+            this.refresh2Button.Location = new System.Drawing.Point(1209, 316);
             this.refresh2Button.Name = "refresh2Button";
             this.refresh2Button.Size = new System.Drawing.Size(73, 32);
             this.refresh2Button.TabIndex = 22;
@@ -235,11 +242,44 @@
             this.sumTextBox.Size = new System.Drawing.Size(88, 29);
             this.sumTextBox.TabIndex = 23;
             // 
+            // remove2Button
+            // 
+            this.remove2Button.Location = new System.Drawing.Point(1049, 314);
+            this.remove2Button.Name = "remove2Button";
+            this.remove2Button.Size = new System.Drawing.Size(79, 33);
+            this.remove2Button.TabIndex = 24;
+            this.remove2Button.Text = "Remove";
+            this.remove2Button.UseVisualStyleBackColor = true;
+            this.remove2Button.Click += new System.EventHandler(this.remove2Button_Click);
+            // 
+            // editButton
+            // 
+            this.editButton.Location = new System.Drawing.Point(76, 315);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(69, 33);
+            this.editButton.TabIndex = 25;
+            this.editButton.Text = "Edit";
+            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
+            // 
+            // edit2Button
+            // 
+            this.edit2Button.Location = new System.Drawing.Point(974, 314);
+            this.edit2Button.Name = "edit2Button";
+            this.edit2Button.Size = new System.Drawing.Size(54, 33);
+            this.edit2Button.TabIndex = 26;
+            this.edit2Button.Text = "Edit";
+            this.edit2Button.UseVisualStyleBackColor = true;
+            this.edit2Button.Click += new System.EventHandler(this.edit2Button_Click);
+            // 
             // ConsignmentShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1395, 423);
+            this.Controls.Add(this.edit2Button);
+            this.Controls.Add(this.editButton);
+            this.Controls.Add(this.remove2Button);
             this.Controls.Add(this.sumTextBox);
             this.Controls.Add(this.refresh2Button);
             this.Controls.Add(this.refreshButton);
@@ -296,5 +336,8 @@
         private Button refreshButton;
         private Button refresh2Button;
         private TextBox sumTextBox;
+        private Button remove2Button;
+        private Button editButton;
+        private Button edit2Button;
     }
 }

@@ -50,21 +50,21 @@
             // 
             // FirstNameTextBox
             // 
-            this.FirstNameTextBox.Location = new System.Drawing.Point(98, 78);
+            this.FirstNameTextBox.Location = new System.Drawing.Point(123, 82);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.Size = new System.Drawing.Size(100, 23);
             this.FirstNameTextBox.TabIndex = 1;
             // 
             // LastNameTextBox
             // 
-            this.LastNameTextBox.Location = new System.Drawing.Point(98, 149);
+            this.LastNameTextBox.Location = new System.Drawing.Point(123, 153);
             this.LastNameTextBox.Name = "LastNameTextBox";
             this.LastNameTextBox.Size = new System.Drawing.Size(100, 23);
             this.LastNameTextBox.TabIndex = 2;
             // 
             // PhoneTextBox
             // 
-            this.PhoneTextBox.Location = new System.Drawing.Point(98, 213);
+            this.PhoneTextBox.Location = new System.Drawing.Point(123, 217);
             this.PhoneTextBox.Name = "PhoneTextBox";
             this.PhoneTextBox.Size = new System.Drawing.Size(100, 23);
             this.PhoneTextBox.TabIndex = 3;
@@ -73,7 +73,7 @@
             // 
             this.FirstNameLabel.AutoSize = true;
             this.FirstNameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FirstNameLabel.Location = new System.Drawing.Point(100, 54);
+            this.FirstNameLabel.Location = new System.Drawing.Point(125, 58);
             this.FirstNameLabel.Name = "FirstNameLabel";
             this.FirstNameLabel.Size = new System.Drawing.Size(86, 21);
             this.FirstNameLabel.TabIndex = 4;
@@ -83,7 +83,7 @@
             // 
             this.LastNameLabel.AutoSize = true;
             this.LastNameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LastNameLabel.Location = new System.Drawing.Point(100, 113);
+            this.LastNameLabel.Location = new System.Drawing.Point(125, 117);
             this.LastNameLabel.Name = "LastNameLabel";
             this.LastNameLabel.Size = new System.Drawing.Size(84, 21);
             this.LastNameLabel.TabIndex = 5;
@@ -93,7 +93,7 @@
             // 
             this.Phonelabel.AutoSize = true;
             this.Phonelabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Phonelabel.Location = new System.Drawing.Point(102, 189);
+            this.Phonelabel.Location = new System.Drawing.Point(127, 193);
             this.Phonelabel.Name = "Phonelabel";
             this.Phonelabel.Size = new System.Drawing.Size(54, 21);
             this.Phonelabel.TabIndex = 6;
@@ -101,7 +101,7 @@
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(109, 269);
+            this.addButton.Location = new System.Drawing.Point(134, 265);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(75, 23);
             this.addButton.TabIndex = 7;
