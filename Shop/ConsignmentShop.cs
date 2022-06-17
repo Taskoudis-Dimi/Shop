@@ -14,11 +14,7 @@ namespace Shop
     public partial class ConsignmentShop : Form
     {
 
-        private Store store = new Store();//
-
-        private List<Item> shoppingCartData = new List<Item>();
-
-        private decimal storeProfit = 0;
+        private Store store = new Store();//        
 
 
         public ConsignmentShop()
@@ -26,7 +22,58 @@ namespace Shop
             InitializeComponent();
 
             display();
+            MainMenu();
         }
+
+
+        private void MainMenu()
+        {
+            MenuStrip MnuStrip = new MenuStrip();
+            //Control is added to the Form using the Add property
+            this.Controls.Add(MnuStrip);
+
+            string[] row = new string[] { "File", "Edit", "About" };
+            foreach (string Row in row)
+            {
+                ToolStripMenuItem MnuStripItem = new ToolStripMenuItem(Row);
+                MnuStrip.Items.Add(MnuStripItem);
+                SubMenu(MnuStripItem, Row);
+
+            }
+
+        
+        }
+
+        private void ClickChild(object sender, EventArgs e)
+        {
+            MessageBox.Show(string.Concat("You have Clicked '", sender.ToString(), "' Menu"), "Menu Items Event",
+            MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+        public void SubMenu(ToolStripMenuItem MnuItems, string var)
+        {
+            if (var == "File")
+            {
+                string[] row = new string[] { "New", "Open", "Add", "Close", "Close Solution" };
+                foreach (string rw in row)
+                {
+                    ToolStripMenuItem SSMenu = new ToolStripMenuItem(rw, null, ClickChild);
+                    SubMenu(SSMenu, rw);
+                    MnuItems.DropDownItems.Add(SSMenu);
+                }
+            }
+
+            if (var == "New")
+            {
+                string[] row = new string[] { "Project", "Web Site", "File..", "Project From Existing Code" };
+                foreach (string rw in row)
+                {
+                    ToolStripMenuItem SSSMenu = new ToolStripMenuItem(rw, null, ClickChild);
+                    MnuItems.DropDownItems.Add(SSSMenu);
+                }
+            }
+        }
+
 
         private void display()
         {
