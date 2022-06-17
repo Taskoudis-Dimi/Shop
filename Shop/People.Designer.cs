@@ -68,6 +68,7 @@
             // 
             // PeopleDataGridView
             // 
+            this.PeopleDataGridView.AllowUserToAddRows = false;
             this.PeopleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PeopleDataGridView.Location = new System.Drawing.Point(4, 67);
             this.PeopleDataGridView.Name = "PeopleDataGridView";

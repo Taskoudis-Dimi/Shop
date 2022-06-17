@@ -178,6 +178,7 @@
             // 
             // storeItemsDataGridView
             // 
+            this.storeItemsDataGridView.AllowUserToAddRows = false;
             this.storeItemsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.storeItemsDataGridView.Location = new System.Drawing.Point(12, 155);
             this.storeItemsDataGridView.Name = "storeItemsDataGridView";
@@ -188,6 +189,7 @@
             // 
             // shoppingCartDataGridView
             // 
+            this.shoppingCartDataGridView.AllowUserToAddRows = false;
             this.shoppingCartDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.shoppingCartDataGridView.Location = new System.Drawing.Point(446, 155);
             this.shoppingCartDataGridView.Name = "shoppingCartDataGridView";
@@ -197,6 +199,7 @@
             // 
             // vendorDataGridView
             // 
+            this.vendorDataGridView.AllowUserToAddRows = false;
             this.vendorDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.vendorDataGridView.Location = new System.Drawing.Point(901, 155);
             this.vendorDataGridView.Name = "vendorDataGridView";

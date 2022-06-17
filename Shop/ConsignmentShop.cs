@@ -20,7 +20,6 @@ namespace Shop
 
         private decimal storeProfit = 0;
 
-        Connection loaddata = new Connection();
 
         public ConsignmentShop()
         {
@@ -31,9 +30,9 @@ namespace Shop
 
         private void display()
         {
-            Connection loaddata = new Connection();
-            loaddata.retrieveData("Select * From Items");
-            storeItemsDataGridView.DataSource = loaddata.table;
+            Connection loaddata1 = new Connection();
+            loaddata1.retrieveData("Select * From Items");
+            storeItemsDataGridView.DataSource = loaddata1.table;
 
 
             Connection loaddata2 = new Connection();
@@ -57,6 +56,7 @@ namespace Shop
             dataGridViewCheckBoxColumn.HeaderText = "Select";
             dataGridViewCheckBoxColumn.ReadOnly = false;
             shoppingCartDataGridView.Columns.Add(dataGridViewCheckBoxColumn);
+            shoppingCartDataGridView.Columns["Select"].DisplayIndex = 0;
 
 
         }
@@ -120,7 +120,8 @@ namespace Shop
         }
         private void removeButton_Click(object sender, EventArgs e)
         {
-            loaddata.commandExc("Delete From Items Where Price=" + storeItemsDataGridView.CurrentRow.Cells[2].Value.ToString() + "");
+            Connection loaddata3 = new Connection();
+            loaddata3.commandExc("Delete From Items Where Price=" + storeItemsDataGridView.CurrentRow.Cells[2].Value.ToString() + "");
             foreach (DataGridViewRow row in storeItemsDataGridView.Rows)
             {
                 storeItemsDataGridView.Rows.RemoveAt(row.Index);
@@ -157,7 +158,8 @@ namespace Shop
 
         private void refresh2Button_Click(object sender, EventArgs e)
         {
-            loaddata.retrieveData("Select * From People");
+            Connection loaddata4 = new Connection();
+            loaddata4.retrieveData("Select * From People");
 
         }
 
@@ -188,8 +190,9 @@ namespace Shop
 
         private void refreshButton_Click(object sender, EventArgs e)
         {
-            loaddata.retrieveData("Select * From Items");
-            storeItemsDataGridView.DataSource = loaddata.table;
+            Connection loaddata5 = new Connection();
+            loaddata5.retrieveData("Select * From Items");
+            storeItemsDataGridView.DataSource = loaddata5.table;
         }
 
         private void storeItemsDataGridView_MouseDown(object sender, MouseEventArgs e)
@@ -221,7 +224,8 @@ namespace Shop
         }
         private void removeItem_Click(object sender, EventArgs e)
         {
-            loaddata.commandExc("Delete From Items Where Price=" + storeItemsDataGridView.CurrentRow.Cells[2].Value.ToString() + "");
+            Connection loaddata6 = new Connection();
+            loaddata6.commandExc("Delete From Items Where Price=" + storeItemsDataGridView.CurrentRow.Cells[2].Value.ToString() + "");
             foreach (DataGridViewRow row in storeItemsDataGridView.Rows)
             {
                 storeItemsDataGridView.Rows.RemoveAt(row.Index);
@@ -241,7 +245,8 @@ namespace Shop
 
         private void remove2Button_Click(object sender, EventArgs e)
         {
-            loaddata.commandExc("Delete From Items Where Phone=" + vendorDataGridView.CurrentRow.Cells[2].Value.ToString() + "");
+            Connection loaddata7 = new Connection();
+            loaddata7.commandExc("Delete From Items Where Phone=" + vendorDataGridView.CurrentRow.Cells[2].Value.ToString() + "");
 
             foreach (DataGridViewRow row in vendorDataGridView.Rows)
             {
@@ -287,7 +292,8 @@ namespace Shop
         }
         private void removePeople_Click(object sender, EventArgs e)
         {
-            loaddata.commandExc("Delete From Items Where Phone=" + vendorDataGridView.CurrentRow.Cells[2].Value.ToString() + "");
+            Connection loaddata8 = new Connection();
+            loaddata8.commandExc("Delete From Items Where Phone=" + vendorDataGridView.CurrentRow.Cells[2].Value.ToString() + "");
 
             foreach (DataGridViewRow row in vendorDataGridView.Rows)
             {

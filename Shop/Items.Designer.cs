@@ -58,6 +58,7 @@
             // 
             // ItemsDataGridView
             // 
+            this.ItemsDataGridView.AllowUserToAddRows = false;
             this.ItemsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ItemsDataGridView.Location = new System.Drawing.Point(22, 63);
             this.ItemsDataGridView.Name = "ItemsDataGridView";
