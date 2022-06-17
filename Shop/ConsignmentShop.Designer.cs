@@ -60,7 +60,7 @@
             // 
             this.headerText.AutoSize = true;
             this.headerText.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.headerText.Location = new System.Drawing.Point(364, 23);
+            this.headerText.Location = new System.Drawing.Point(522, 21);
             this.headerText.Name = "headerText";
             this.headerText.Size = new System.Drawing.Size(243, 37);
             this.headerText.TabIndex = 0;
@@ -185,6 +185,7 @@
             this.storeItemsDataGridView.RowTemplate.Height = 25;
             this.storeItemsDataGridView.Size = new System.Drawing.Size(295, 150);
             this.storeItemsDataGridView.TabIndex = 16;
+            this.storeItemsDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.storeItemsDataGridView_CellMouseClick);
             this.storeItemsDataGridView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.storeItemsDataGridView_MouseDown);
             // 
             // shoppingCartDataGridView

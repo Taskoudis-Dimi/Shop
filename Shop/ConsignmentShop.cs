@@ -347,6 +347,30 @@ namespace Shop
                 vendorDataGridView.Rows.RemoveAt(row.Index);
             }
         }
+
+        private void storeItemsDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridView dataGridView = (DataGridView)sender;
+            if (e.ColumnIndex < 0 || e.RowIndex < 0) return;
+
+            DataGridViewCell cell = dataGridView[e.ColumnIndex, e.RowIndex];
+            DataGridViewColumn col = dataGridView.Columns[e.ColumnIndex];
+            DataGridViewRow row = dataGridView.Rows[e.RowIndex];
+            int selectedRows_Count = dataGridView.SelectedRows.Count;
+            
+            if (e.Button == MouseButtons.Right)
+            {
+
+            }
+
+            if (e.Button == MouseButtons.Left)
+            {
+
+            }
+
+
+
+        }
     }
 
 }
