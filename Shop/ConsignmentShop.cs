@@ -14,8 +14,7 @@ namespace Shop
     public partial class ConsignmentShop : Form
     {
 
-        private Store store = new Store();//        
-
+        private Store store = new Store();  
 
         public ConsignmentShop()
         {
@@ -23,6 +22,7 @@ namespace Shop
 
             display();
             MainMenu();
+
         }
 
 
@@ -32,50 +32,60 @@ namespace Shop
             //Control is added to the Form using the Add property
             this.Controls.Add(MnuStrip);
 
-            string[] row = new string[] { "File", "Edit", "About" };
-            foreach (string Row in row)
+            string[] items = new string[] { "File", "Edit", "About" };
+            foreach (string Row in items)
             {
                 ToolStripMenuItem MnuStripItem = new ToolStripMenuItem(Row);
                 MnuStrip.Items.Add(MnuStripItem);
-                SubMenu(MnuStripItem, Row);
+                //SubMenu(MnuStripItem, Row);
+                if (MnuStripItem.Text == "About")
+                {
+                    MnuStripItem.Click += new EventHandler(MnuStripItem_Click);
+                }
 
             }
 
         
         }
-
-        private void ClickChild(object sender, EventArgs e)
+        private void MnuStripItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(string.Concat("You have Clicked '", sender.ToString(), "' Menu"), "Menu Items Event",
-            MessageBoxButtons.OK, MessageBoxIcon.Information);
+            About form = new About();
+            form.Show();
 
-        }
-        public void SubMenu(ToolStripMenuItem MnuItems, string var)
-        {
-            if (var == "File")
-            {
-                string[] row = new string[] { "New", "Open", "Add", "Close", "Close Solution" };
-                foreach (string rw in row)
-                {
-                    ToolStripMenuItem SSMenu = new ToolStripMenuItem(rw, null, ClickChild);
-                    SubMenu(SSMenu, rw);
-                    MnuItems.DropDownItems.Add(SSMenu);
-                }
-            }
-
-            if (var == "New")
-            {
-                string[] row = new string[] { "Project", "Web Site", "File..", "Project From Existing Code" };
-                foreach (string rw in row)
-                {
-                    ToolStripMenuItem SSSMenu = new ToolStripMenuItem(rw, null, ClickChild);
-                    MnuItems.DropDownItems.Add(SSSMenu);
-                }
-            }
         }
 
 
-        private void display()
+        private void FileExit_clicked(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void FileNew_clicked(object sender, EventArgs e)
+        {
+            MessageBox.Show("New", "MENU_CREATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        private void FileOpen_clicked(object sender, EventArgs e)
+        {
+            MessageBox.Show("Open", "MENU_CREATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        private void pop_Clicked(object sender, EventArgs e)
+        {
+            MessageBox.Show("Popupmenu", "MENU_CREATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        private void About_clicked(object sender, EventArgs e)
+        {
+            MessageBox.Show("G.GNANA ARUN GANESH", "ggarung@rediffmail.com");
+        }
+    
+
+
+
+
+
+
+
+
+
+    private void display()
         {
             Connection loaddata1 = new Connection();
             loaddata1.retrieveData("Select * From Items");
